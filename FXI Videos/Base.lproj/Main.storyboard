@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kHe-BO-fHe">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--FXI Videos-->
+        <scene sceneID="MiN-yv-D9H">
+            <objects>
+                <tableViewController id="95H-PF-mpl" customClass="VideosTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iw2-BF-xjK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="awk-31-CjB">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="95H-PF-mpl" id="ix6-CU-sad"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Video Cell" id="y5V-Xy-BaU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5V-Xy-BaU" id="6Xi-MX-BbY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="J3G-LA-9xz" kind="push" identifier="Segue to Video" id="fah-0K-uZC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="95H-PF-mpl" id="fbw-iI-qW5"/>
+                            <outlet property="delegate" destination="95H-PF-mpl" id="jpm-sV-bb9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="FXI Videos" id="Gfi-4K-EjO"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="QKx-Z5-3sM" id="Ift-zQ-5Pg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Oj-Tf-Nih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="QKx-Z5-3sM">
+                    <connections>
+                        <outlet property="delegate" destination="95H-PF-mpl" id="lU1-Z8-Aow"/>
+                        <outlet property="searchBar" destination="awk-31-CjB" id="FsM-Eq-lOK"/>
+                        <outlet property="searchContentsController" destination="95H-PF-mpl" id="Q0T-c7-IcD"/>
+                        <outlet property="searchResultsDataSource" destination="95H-PF-mpl" id="Hyb-E7-Vfk"/>
+                        <outlet property="searchResultsDelegate" destination="95H-PF-mpl" id="blJ-AJ-kAr"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="627" y="467"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V7w-u7-CMC">
+            <objects>
+                <viewController id="J3G-LA-9xz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zMi-OP-2IZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7hV-KD-8RR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7AB-7j-i5m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lEB-9w-Lgl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueA-53-X5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="467"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xhm-Gh-xh4">
+            <objects>
+                <navigationController id="kHe-BO-fHe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mDF-RO-89v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="95H-PF-mpl" kind="relationship" relationship="rootViewController" id="QfD-4s-RmG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0L-Y4-xHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="467"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
