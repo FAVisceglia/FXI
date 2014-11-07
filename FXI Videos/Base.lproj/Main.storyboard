@@ -26,9 +26,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5V-Xy-BaU" id="6Xi-MX-BbY">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="J3G-LA-9xz" kind="push" identifier="Segue to Video" id="fah-0K-uZC"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,25 +51,6 @@
             </objects>
             <point key="canvasLocation" x="627" y="467"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="V7w-u7-CMC">
-            <objects>
-                <viewController id="J3G-LA-9xz" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zMi-OP-2IZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="7hV-KD-8RR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7AB-7j-i5m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lEB-9w-Lgl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ueA-53-X5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1133" y="467"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xhm-Gh-xh4">
             <objects>
@@ -80,6 +58,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mDF-RO-89v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="95H-PF-mpl" kind="relationship" relationship="rootViewController" id="QfD-4s-RmG"/>

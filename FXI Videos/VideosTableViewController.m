@@ -242,6 +242,25 @@
 //    [view setTintColor:[UIColor colorWithRed:70.0f/255.0f green:133.0f/255.0f blue:197.0f/255.0f alpha:1.0f]];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FXIVideo *video = nil;
+    
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    {
+        video = [[self filteredVideos] objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        video = [[self videos] objectAtIndex:[indexPath row]];
+    }
+
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[video videoURL]];
+    [[player moviePlayer] setFullscreen:YES];
+    [[player moviePlayer] setScalingMode:MPMovieScalingModeAspectFit];
+    [self presentMoviePlayerViewControllerAnimated:player];
+}
+
 #pragma mark - Navigation
 /**
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -250,7 +269,7 @@
     // Invoked when a segue in the navigation controller heirarchy occurs
     
     // If the segue is the expected (ID from storyboard)
-    if ([[segue identifier] isEqualToString:@"Segue to Answer"])
+    if ([[segue identifier] isEqualToString:@"Segue to Video"])
     {
         // Get the viewcontroller we are going to
         FAQAnswerViewController *avc = [segue destinationViewController];

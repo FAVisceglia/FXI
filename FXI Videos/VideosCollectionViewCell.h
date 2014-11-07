@@ -10,7 +10,7 @@
 
 @interface VideosCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *videoThumbnailImage;
-@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabelView;
+@property (weak, nonatomic) IBOutlet UIButton *videoThumbnailButtonView;
 
 @end

@@ -20,6 +20,7 @@
 		72D066011A0BDA7000D0E47B /* test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 72D066001A0BDA7000D0E47B /* test.MOV */; };
 		72D066041A0BF6FF00D0E47B /* VideosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */; };
 		72D066071A0BFFD800D0E47B /* VideosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */; };
+		92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3D9941A0D09110023C29E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewController.m; sourceTree = "<group>"; };
 		72D066051A0BFFD800D0E47B /* VideosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewCell.h; sourceTree = "<group>"; };
 		72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewCell.m; sourceTree = "<group>"; };
+		92A3D9941A0D09110023C29E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */,
 				72D065F81A0BBE4200D0E47B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 				72D065C51A0BAA5700D0E47B /* FXI Videos */,
 				72D065DF1A0BAA5700D0E47B /* FXI VideosTests */,
 				72D065C41A0BAA5700D0E47B /* Products */,
+				92A3D9941A0D09110023C29E /* MediaPlayer.framework */,
 				72D065F71A0BBE4200D0E47B /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
@@ -491,6 +495,7 @@
 				72D065E81A0BAA5700D0E47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D065E91A0BAA5700D0E47B /* Build configuration list for PBXNativeTarget "FXI VideosTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				72D065EB1A0BAA5700D0E47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
