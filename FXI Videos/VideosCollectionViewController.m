@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
-    [layout setItemSize:CGSizeMake(300.0f, 300.0f)];
+    [layout setItemSize:CGSizeMake(200.0f, 200.0f)];
     [layout setSectionInset:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     [layout setMinimumLineSpacing:0.0f];
@@ -82,6 +82,16 @@ static NSString * const reuseIdentifier = @"Video Cell";
     FXIVideo *video = [[FXIVideo alloc] initWithURL:fileURL];
     
     [[self videos] addObject:video];
+    
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"cars test" ofType:@"MOV"];
+    unsigned long long fileSize2 = [[NSFileManager defaultManager] attributesOfItemAtPath:path2 error:nil].fileSize;
+    NSLog(@"%llul", fileSize2);
+    NSLog(@"Da path: %@", path2);
+    NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"cars test" withExtension:@"MOV"];
+    
+    FXIVideo *video2 = [[FXIVideo alloc] initWithURL:fileURL2];
+    
+    [[self videos] addObject:video2];
     
 //    [[self collectionView] reloadData];
 }
@@ -131,6 +141,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
     
     [[cell videoThumbnailButtonView] setBackgroundImage:[[UIImage alloc] initWithData:[video thumbnail]] forState:UIControlStateNormal];
     [[cell videoTitleLabelView] setText:[video title]];
+    [[cell videoTitleLabelView] setTextColor:[UIColor colorWithRed:(18.0/255.0) green:(52.0/255.0) blue:(88.0/255.0) alpha:1.0f]];
 
     return cell;
 }

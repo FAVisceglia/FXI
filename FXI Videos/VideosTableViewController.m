@@ -83,7 +83,17 @@
     
     FXIVideo *video = [[FXIVideo alloc] initWithURL:fileURL];
     [[self videos] addObject:video];
-    NSLog(@"Title: %@", [[[self videos] objectAtIndex:0] title]);
+    
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"cars test" ofType:@"MOV"];
+    unsigned long long fileSize2 = [[NSFileManager defaultManager] attributesOfItemAtPath:path2 error:nil].fileSize;
+    NSLog(@"%llul", fileSize2);
+    NSLog(@"%@", path2);
+    NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"cars test" withExtension:@"MOV"];
+    
+    FXIVideo *video2 = [[FXIVideo alloc] initWithURL:fileURL2];
+    [[self videos] addObject:video2];
+    
+    
     
     // Hides search bar on view load by offsetting the table (scrolling it down)
     [[self tableView] setContentOffset:CGPointMake(0, [[[self searchDisplayController] searchBar] frame].size.height - [[self tableView] contentOffset].y)];
@@ -199,12 +209,13 @@
     [[cell textLabel] setNumberOfLines:0];
     [[cell textLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];**/
     [[cell textLabel] setText:[video title]];
+    [[cell textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0) green:(52.0/255.0) blue:(88.0/255.0) alpha:1.0f]];
     
     return cell;
 }
 
 #pragma mark - Table View Delegate
-
+/**
 // Return the row height for a given indexpath (cell)
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -235,7 +246,7 @@
     
     // Return the height (rounded up to integer) plus a static buffer
     return ceilf(CGRectGetHeight(frame) + CELL_BUFFER_SPACING);
-}
+}**/
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
