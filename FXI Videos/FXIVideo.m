@@ -83,7 +83,6 @@
                                                        actualTime:NULL
                                                             error:&error];
     UIImage *image = [[UIImage alloc] initWithCGImage:imageReference];
-    NSLog(@"Size of photo: %f", image.size.width);
     
     return UIImagePNGRepresentation(image);
 }

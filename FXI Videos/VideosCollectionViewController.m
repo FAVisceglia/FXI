@@ -240,7 +240,6 @@ static NSString * const reuseIdentifier = @"Video Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    NSLog(@"Items in section called");
     return 1;
 }
 
@@ -296,10 +295,6 @@ static NSString * const reuseIdentifier = @"Video Cell";
 
         [self presentMoviePlayerViewControllerAnimated:player];
     }
-    
-    NSLog(@"Button view: %@", NSStringFromClass([sender class]));
-    NSLog(@"Button superview: %@", NSStringFromClass([[sender superview] class]));
-    NSLog(@"Button superview superview: %@", NSStringFromClass([[[sender superview] superview] class]));
 }
 
 
