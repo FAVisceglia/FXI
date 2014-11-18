@@ -62,36 +62,147 @@
 {
     [super viewDidLoad];
     
-/**    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error = NULL;
-    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [filePaths firstObject];
+    FXIVideo *video = nil;
     
-    NSString *videoPath = [documentsDir stringByAppendingPathComponent:@"test.MOV"];
-    
-    if ([fileManager fileExistsAtPath:videoPath] == NO)
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"01 FXI About - Main" withExtension:@"m4v"];
+    if (fileURL)
     {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"MOV"];
-        [fileManager copyItemAtPath:resourcePath toPath:videoPath error:&error];
-    }**/
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"MOV"];
-    unsigned long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
-    NSLog(@"%llul", fileSize);
-    NSLog(@"%@", path);
-    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"MOV"];
+    fileURL = [[NSBundle mainBundle] URLForResource:@"02 FXI About - Web" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    FXIVideo *video = [[FXIVideo alloc] initWithURL:fileURL];
-    [[self videos] addObject:video];
+    fileURL = [[NSBundle mainBundle] URLForResource:@"03 FXI Who We Are" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"cars test" ofType:@"MOV"];
-    unsigned long long fileSize2 = [[NSFileManager defaultManager] attributesOfItemAtPath:path2 error:nil].fileSize;
-    NSLog(@"%llul", fileSize2);
-    NSLog(@"%@", path2);
-    NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"cars test" withExtension:@"MOV"];
+    fileURL = [[NSBundle mainBundle] URLForResource:@"04 FXI Journey" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    FXIVideo *video2 = [[FXIVideo alloc] initWithURL:fileURL2];
-    [[self videos] addObject:video2];
+    fileURL = [[NSBundle mainBundle] URLForResource:@"05 Molecules to Mattresses" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"06 Aston Tour" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"07 FXI at Nascar" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Recovery - Topper Instructions" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Airflow - Aerus Max" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Airflow - Ambiessence" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"11 Airflow - MaxPerm" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"12 Gel - MemGel Swirl" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"13 Heat Management - GelTrix" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"14 Pressure Mapping - Back Support Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"15 Pressure Mapping - Customizable Reflief Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"16 Pressure Mapping - Elite Performance Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"17 Pressure Mapping - Energizing Performance Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"18 Pressure Mapping - Gel Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"19 Pressure Mapping - Smart Foam Alone1" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"20 Pressure Mapping - Total Support Topper" withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
     
     
@@ -208,8 +319,11 @@
     [[cell textLabel] setLineBreakMode:NSLineBreakByWordWrapping];
     [[cell textLabel] setNumberOfLines:0];
     [[cell textLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];**/
-    [[cell textLabel] setText:[video title]];
-    [[cell textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0) green:(52.0/255.0) blue:(88.0/255.0) alpha:1.0f]];
+    [[cell textLabel] setText:[[video title] substringFromIndex:3]];
+    [[cell textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0)
+                                                   green:(52.0/255.0)
+                                                    blue:(88.0/255.0)
+                                                   alpha:1.0f]];
     
     return cell;
 }

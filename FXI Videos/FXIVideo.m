@@ -31,7 +31,7 @@
 // Setter for the video URL property
 - (void)setVideoURL:(NSURL *)videoURL
 {
-    NSArray *validExtensions = @[@"mp4", @"mov", @"MP4", @"MOV"]; // Array of valid video file extensions
+    NSArray *validExtensions = @[@"mp4", @"mov", @"MP4", @"MOV", @"M4V", @"m4v"]; // Array of valid video file extensions
     NSString *fileExtension = [videoURL pathExtension]; // The file extenstion of the video
     NSLog(@"URL in Setter: %@", videoURL);
     NSLog(@"File extension in model: %@", fileExtension);
@@ -44,7 +44,7 @@
         _videoURL = videoURL;
         
         // Set the video thumbnail
-        [self setThumbnail:[self getThumbnailForVideo:videoURL atTime:1]];
+        [self setThumbnail:[self getThumbnailForVideo:videoURL atTime:5]];
         
         NSString *filePath = [videoURL path]; // The path of the video
         NSString *fileName = [[filePath lastPathComponent] stringByDeletingPathExtension]; // The file name (no extension) of the video
@@ -78,7 +78,7 @@
     NSError *error = NULL;
     
     uint s = (uint)seconds;
-    CMTime time = CMTimeMake(s, s);
+    CMTime time = CMTimeMake(s, 1);
     
     CGImageRef imageReference = [imageGenerator copyCGImageAtTime:time
                                                        actualTime:NULL

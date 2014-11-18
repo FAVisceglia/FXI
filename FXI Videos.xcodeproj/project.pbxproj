@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		722830FD1A113A0500077CE3 /* cars test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 722830FC1A113A0500077CE3 /* cars test.MOV */; };
 		72D065C91A0BAA5700D0E47B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065C81A0BAA5700D0E47B /* main.m */; };
 		72D065CC1A0BAA5700D0E47B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065CB1A0BAA5700D0E47B /* AppDelegate.m */; };
 		72D065D21A0BAA5700D0E47B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D065D01A0BAA5700D0E47B /* Main.storyboard */; };
@@ -18,9 +17,28 @@
 		72D065F61A0BB1A600D0E47B /* FXIVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065F51A0BB1A600D0E47B /* FXIVideo.m */; };
 		72D065F81A0BBE4200D0E47B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D065F71A0BBE4200D0E47B /* AVFoundation.framework */; };
 		72D065FF1A0BCE1700D0E47B /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065FE1A0BCE1700D0E47B /* VideosTableViewController.m */; };
-		72D066011A0BDA7000D0E47B /* test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 72D066001A0BDA7000D0E47B /* test.MOV */; };
 		72D066041A0BF6FF00D0E47B /* VideosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */; };
 		72D066071A0BFFD800D0E47B /* VideosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */; };
+		72EF41311A1B955900140B9F /* 01 FXI About - Main.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */; };
+		72EF41321A1B955900140B9F /* 02 FXI About - Web.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */; };
+		72EF41331A1B955900140B9F /* 03 FXI Who We Are.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */; };
+		72EF41341A1B955900140B9F /* 04 FXI Journey.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */; };
+		72EF41351A1B955900140B9F /* 05 Molecules to Mattresses.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */; };
+		72EF41361A1B955900140B9F /* 06 Aston Tour.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */; };
+		72EF41371A1B955900140B9F /* 07 FXI at Nascar.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */; };
+		72EF41381A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41241A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v */; };
+		72EF41391A1B955900140B9F /* 09 Airflow - Aerus Max.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41251A1B955900140B9F /* 09 Airflow - Aerus Max.m4v */; };
+		72EF413A1A1B955900140B9F /* 10 Airflow - Ambiessence.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41261A1B955900140B9F /* 10 Airflow - Ambiessence.m4v */; };
+		72EF413B1A1B955900140B9F /* 11 Airflow - MaxPerm.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41271A1B955900140B9F /* 11 Airflow - MaxPerm.m4v */; };
+		72EF413C1A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41281A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v */; };
+		72EF413D1A1B955900140B9F /* 13 Heat Management - GelTrix.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41291A1B955900140B9F /* 13 Heat Management - GelTrix.m4v */; };
+		72EF413E1A1B955900140B9F /* 14 Pressure Mapping - Back Support Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412A1A1B955900140B9F /* 14 Pressure Mapping - Back Support Topper.m4v */; };
+		72EF413F1A1B955900140B9F /* 15 Pressure Mapping - Customizable Reflief Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412B1A1B955900140B9F /* 15 Pressure Mapping - Customizable Reflief Topper.m4v */; };
+		72EF41401A1B955900140B9F /* 16 Pressure Mapping - Elite Performance Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412C1A1B955900140B9F /* 16 Pressure Mapping - Elite Performance Topper.m4v */; };
+		72EF41411A1B955900140B9F /* 17 Pressure Mapping - Energizing Performance Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412D1A1B955900140B9F /* 17 Pressure Mapping - Energizing Performance Topper.m4v */; };
+		72EF41421A1B955900140B9F /* 18 Pressure Mapping - Gel Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412E1A1B955900140B9F /* 18 Pressure Mapping - Gel Topper.m4v */; };
+		72EF41431A1B955900140B9F /* 19 Pressure Mapping - Smart Foam Alone1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412F1A1B955900140B9F /* 19 Pressure Mapping - Smart Foam Alone1.m4v */; };
+		72EF41441A1B955900140B9F /* 20 Pressure Mapping - Total Support Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41301A1B955900140B9F /* 20 Pressure Mapping - Total Support Topper.m4v */; };
 		92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3D9941A0D09110023C29E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		722830FC1A113A0500077CE3 /* cars test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "cars test.MOV"; path = "Resources/cars test.MOV"; sourceTree = "<group>"; };
 		72D065C31A0BAA5700D0E47B /* FXI Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FXI Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D065C71A0BAA5700D0E47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D065C81A0BAA5700D0E47B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,11 +70,30 @@
 		72D065F71A0BBE4200D0E47B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72D065FD1A0BCE1700D0E47B /* VideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosTableViewController.h; sourceTree = "<group>"; };
 		72D065FE1A0BCE1700D0E47B /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
-		72D066001A0BDA7000D0E47B /* test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = test.MOV; path = Resources/test.MOV; sourceTree = "<group>"; };
 		72D066021A0BF6FF00D0E47B /* VideosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewController.h; sourceTree = "<group>"; };
 		72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewController.m; sourceTree = "<group>"; };
 		72D066051A0BFFD800D0E47B /* VideosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewCell.h; sourceTree = "<group>"; };
 		72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewCell.m; sourceTree = "<group>"; };
+		72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 FXI About - Main.m4v"; path = "Resources/01 FXI About - Main.m4v"; sourceTree = "<group>"; };
+		72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 FXI About - Web.m4v"; path = "Resources/02 FXI About - Web.m4v"; sourceTree = "<group>"; };
+		72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 FXI Who We Are.m4v"; path = "Resources/03 FXI Who We Are.m4v"; sourceTree = "<group>"; };
+		72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 FXI Journey.m4v"; path = "Resources/04 FXI Journey.m4v"; sourceTree = "<group>"; };
+		72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Molecules to Mattresses.m4v"; path = "Resources/05 Molecules to Mattresses.m4v"; sourceTree = "<group>"; };
+		72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Aston Tour.m4v"; path = "Resources/06 Aston Tour.m4v"; sourceTree = "<group>"; };
+		72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 FXI at Nascar.m4v"; path = "Resources/07 FXI at Nascar.m4v"; sourceTree = "<group>"; };
+		72EF41241A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Recovery - Topper Instructions.m4v"; path = "Resources/08 Recovery - Topper Instructions.m4v"; sourceTree = "<group>"; };
+		72EF41251A1B955900140B9F /* 09 Airflow - Aerus Max.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Airflow - Aerus Max.m4v"; path = "Resources/09 Airflow - Aerus Max.m4v"; sourceTree = "<group>"; };
+		72EF41261A1B955900140B9F /* 10 Airflow - Ambiessence.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Airflow - Ambiessence.m4v"; path = "Resources/10 Airflow - Ambiessence.m4v"; sourceTree = "<group>"; };
+		72EF41271A1B955900140B9F /* 11 Airflow - MaxPerm.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 Airflow - MaxPerm.m4v"; path = "Resources/11 Airflow - MaxPerm.m4v"; sourceTree = "<group>"; };
+		72EF41281A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 Gel - MemGel Swirl.m4v"; path = "Resources/12 Gel - MemGel Swirl.m4v"; sourceTree = "<group>"; };
+		72EF41291A1B955900140B9F /* 13 Heat Management - GelTrix.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 Heat Management - GelTrix.m4v"; path = "Resources/13 Heat Management - GelTrix.m4v"; sourceTree = "<group>"; };
+		72EF412A1A1B955900140B9F /* 14 Pressure Mapping - Back Support Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14 Pressure Mapping - Back Support Topper.m4v"; path = "Resources/14 Pressure Mapping - Back Support Topper.m4v"; sourceTree = "<group>"; };
+		72EF412B1A1B955900140B9F /* 15 Pressure Mapping - Customizable Reflief Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "15 Pressure Mapping - Customizable Reflief Topper.m4v"; path = "Resources/15 Pressure Mapping - Customizable Reflief Topper.m4v"; sourceTree = "<group>"; };
+		72EF412C1A1B955900140B9F /* 16 Pressure Mapping - Elite Performance Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "16 Pressure Mapping - Elite Performance Topper.m4v"; path = "Resources/16 Pressure Mapping - Elite Performance Topper.m4v"; sourceTree = "<group>"; };
+		72EF412D1A1B955900140B9F /* 17 Pressure Mapping - Energizing Performance Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "17 Pressure Mapping - Energizing Performance Topper.m4v"; path = "Resources/17 Pressure Mapping - Energizing Performance Topper.m4v"; sourceTree = "<group>"; };
+		72EF412E1A1B955900140B9F /* 18 Pressure Mapping - Gel Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "18 Pressure Mapping - Gel Topper.m4v"; path = "Resources/18 Pressure Mapping - Gel Topper.m4v"; sourceTree = "<group>"; };
+		72EF412F1A1B955900140B9F /* 19 Pressure Mapping - Smart Foam Alone1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "19 Pressure Mapping - Smart Foam Alone1.m4v"; path = "Resources/19 Pressure Mapping - Smart Foam Alone1.m4v"; sourceTree = "<group>"; };
+		72EF41301A1B955900140B9F /* 20 Pressure Mapping - Total Support Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 Pressure Mapping - Total Support Topper.m4v"; path = "Resources/20 Pressure Mapping - Total Support Topper.m4v"; sourceTree = "<group>"; };
 		92A3D9941A0D09110023C29E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -157,8 +193,26 @@
 		72D065F91A0BCD2400D0E47B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				722830FC1A113A0500077CE3 /* cars test.MOV */,
-				72D066001A0BDA7000D0E47B /* test.MOV */,
+				72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */,
+				72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */,
+				72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */,
+				72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */,
+				72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */,
+				72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */,
+				72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */,
+				72EF41241A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v */,
+				72EF41251A1B955900140B9F /* 09 Airflow - Aerus Max.m4v */,
+				72EF41261A1B955900140B9F /* 10 Airflow - Ambiessence.m4v */,
+				72EF41271A1B955900140B9F /* 11 Airflow - MaxPerm.m4v */,
+				72EF41281A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v */,
+				72EF41291A1B955900140B9F /* 13 Heat Management - GelTrix.m4v */,
+				72EF412A1A1B955900140B9F /* 14 Pressure Mapping - Back Support Topper.m4v */,
+				72EF412B1A1B955900140B9F /* 15 Pressure Mapping - Customizable Reflief Topper.m4v */,
+				72EF412C1A1B955900140B9F /* 16 Pressure Mapping - Elite Performance Topper.m4v */,
+				72EF412D1A1B955900140B9F /* 17 Pressure Mapping - Energizing Performance Topper.m4v */,
+				72EF412E1A1B955900140B9F /* 18 Pressure Mapping - Gel Topper.m4v */,
+				72EF412F1A1B955900140B9F /* 19 Pressure Mapping - Smart Foam Alone1.m4v */,
+				72EF41301A1B955900140B9F /* 20 Pressure Mapping - Total Support Topper.m4v */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -264,12 +318,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EF41341A1B955900140B9F /* 04 FXI Journey.m4v in Resources */,
+				72EF413E1A1B955900140B9F /* 14 Pressure Mapping - Back Support Topper.m4v in Resources */,
+				72EF413D1A1B955900140B9F /* 13 Heat Management - GelTrix.m4v in Resources */,
 				72D065EE1A0BAC0E00D0E47B /* Main~ipad.storyboard in Resources */,
+				72EF41441A1B955900140B9F /* 20 Pressure Mapping - Total Support Topper.m4v in Resources */,
+				72EF413A1A1B955900140B9F /* 10 Airflow - Ambiessence.m4v in Resources */,
+				72EF413F1A1B955900140B9F /* 15 Pressure Mapping - Customizable Reflief Topper.m4v in Resources */,
 				72D065D21A0BAA5700D0E47B /* Main.storyboard in Resources */,
+				72EF41381A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v in Resources */,
+				72EF41321A1B955900140B9F /* 02 FXI About - Web.m4v in Resources */,
+				72EF41401A1B955900140B9F /* 16 Pressure Mapping - Elite Performance Topper.m4v in Resources */,
+				72EF41411A1B955900140B9F /* 17 Pressure Mapping - Energizing Performance Topper.m4v in Resources */,
 				72D065D71A0BAA5700D0E47B /* LaunchScreen.xib in Resources */,
-				72D066011A0BDA7000D0E47B /* test.MOV in Resources */,
-				722830FD1A113A0500077CE3 /* cars test.MOV in Resources */,
+				72EF413C1A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v in Resources */,
+				72EF41311A1B955900140B9F /* 01 FXI About - Main.m4v in Resources */,
+				72EF41391A1B955900140B9F /* 09 Airflow - Aerus Max.m4v in Resources */,
+				72EF41431A1B955900140B9F /* 19 Pressure Mapping - Smart Foam Alone1.m4v in Resources */,
+				72EF41361A1B955900140B9F /* 06 Aston Tour.m4v in Resources */,
 				72D065D41A0BAA5700D0E47B /* Images.xcassets in Resources */,
+				72EF41351A1B955900140B9F /* 05 Molecules to Mattresses.m4v in Resources */,
+				72EF413B1A1B955900140B9F /* 11 Airflow - MaxPerm.m4v in Resources */,
+				72EF41371A1B955900140B9F /* 07 FXI at Nascar.m4v in Resources */,
+				72EF41421A1B955900140B9F /* 18 Pressure Mapping - Gel Topper.m4v in Resources */,
+				72EF41331A1B955900140B9F /* 03 FXI Who We Are.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
