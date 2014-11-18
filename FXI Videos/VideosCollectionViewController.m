@@ -11,14 +11,21 @@
 #import "VideosCollectionViewCell.h"
 #import <MediaPlayer/MediaPlayer.h>
 
+
 @interface VideosCollectionViewController ()
+
+#pragma mark - Private Properties
 
 // Array of the objects to represent in the table
 @property (copy, nonatomic) NSMutableArray *videos;
+
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
 
 @end
+
+
+#pragma mark
 
 @implementation VideosCollectionViewController
 
@@ -50,16 +57,19 @@ static NSString * const reuseIdentifier = @"Video Cell";
     return _filteredVideos;
 }
 
-- (void)viewDidLoad {
+#pragma mark - Delegation
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
-    [layout setItemSize:CGSizeMake(200.0f, 200.0f)];
-    [layout setSectionInset:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
+    [layout setItemSize:CGSizeMake(180.0f, 200.0f)];
+    [layout setSectionInset:UIEdgeInsetsMake(20.0f, 20.0f, 20.0f, 20.0f)];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [layout setMinimumLineSpacing:0.0f];
-    [layout setMinimumInteritemSpacing:0.0f];
+    [layout setMinimumLineSpacing:10.0f];
+    [layout setMinimumInteritemSpacing:10.0f];
     
     [[self collectionView] setCollectionViewLayout:layout];
     
@@ -210,7 +220,8 @@ static NSString * const reuseIdentifier = @"Video Cell";
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

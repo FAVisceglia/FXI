@@ -33,13 +33,10 @@
 {
     NSArray *validExtensions = @[@"mp4", @"mov", @"MP4", @"MOV", @"M4V", @"m4v"]; // Array of valid video file extensions
     NSString *fileExtension = [videoURL pathExtension]; // The file extenstion of the video
-    NSLog(@"URL in Setter: %@", videoURL);
-    NSLog(@"File extension in model: %@", fileExtension);
     
     // Check if the file has a valid extension
     if ([validExtensions containsObject:fileExtension])
     {
-        NSLog(@"Valid file");
         // Local variable assignment
         _videoURL = videoURL;
         
@@ -77,6 +74,8 @@
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     NSError *error = NULL;
     
+    [imageGenerator setMaximumSize:CGSizeMake(160.0f, 90.0f)];
+    
     uint s = (uint)seconds;
     CMTime time = CMTimeMake(s, 1);
     
@@ -84,6 +83,7 @@
                                                        actualTime:NULL
                                                             error:&error];
     UIImage *image = [[UIImage alloc] initWithCGImage:imageReference];
+    NSLog(@"Size of photo: %f", image.size.width);
     
     return UIImagePNGRepresentation(image);
 }

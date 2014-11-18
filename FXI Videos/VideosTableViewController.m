@@ -9,16 +9,19 @@
 #import "VideosTableViewController.h"
 #import "FXIVideo.h"
 
+
 @interface VideosTableViewController()
 
 #pragma mark - Private Properties
 
 // Array of the objects to represent in the table
 @property (copy, nonatomic) NSMutableArray *videos;
+
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
 
 @end
+
 
 #pragma mark
 
