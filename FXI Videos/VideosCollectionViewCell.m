@@ -19,11 +19,6 @@
 {
     self = [super initWithFrame:frame];
     
-    if (self)
-    {
-        [[self contentView] setBackgroundColor:[UIColor redColor]];
-    }
-    
     return self;
 }
 
