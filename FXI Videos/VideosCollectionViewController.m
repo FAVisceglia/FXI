@@ -81,7 +81,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                              withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"01 FXI About - Main"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -89,7 +91,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"02 FXI About - Web"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -97,7 +101,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"03 FXI Who We Are"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -105,7 +111,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"04 FXI Journey"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -113,7 +121,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"05 Molecules to Mattresses"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -121,7 +131,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"06 Aston Tour"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -129,7 +141,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"07 FXI at Nascar"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -137,7 +151,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"08 Recovery - Topper Instructions"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -145,7 +161,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"09 Airflow - Aerus Max"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -153,7 +171,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"10 Airflow - Ambiessence"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -161,7 +181,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"11 Airflow - MaxPerm"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -169,7 +191,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"12 Gel - MemGel Swirl"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -177,7 +201,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"13 Heat Management - GelTrix"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -185,7 +211,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
  
@@ -193,7 +221,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -201,7 +231,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -209,7 +241,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -217,7 +251,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -225,7 +261,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
@@ -233,7 +271,9 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                       withExtension:@"m4v"];
     if (fileURL)
     {
-        video = [[FXIVideo alloc] initWithURL:fileURL];
+        video = [[FXIVideo alloc] initWithURL:fileURL
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
+                                                                      withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     

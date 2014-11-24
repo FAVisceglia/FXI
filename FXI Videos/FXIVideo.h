@@ -18,13 +18,16 @@
 // The URL of the locally-stored video (read & write)
 @property (strong, nonatomic) NSURL *videoURL;
 
-// The thumbnail image of the video (read only)
-@property (copy, nonatomic, readonly) NSData *thumbnail;
+// The thumbnail image of the video (read & write)
+@property (copy, nonatomic) NSData *thumbnail;
 
 // The title of the video (read only)
 @property (copy, nonatomic, readonly) NSString *title;
 
 #pragma mark - Public Methods
+
+// Designated initializer; create a new video from a file stored at the given URL with given thumbnail
+- (instancetype)initWithURL:(NSURL *)urlOfVideo andThumbnailURL:(NSURL *)urlOfThumbnail;
 
 // Designated initializer; create a new video from a file stored at the given URL
 - (instancetype)initWithURL:(NSURL *)urlOfVideo;

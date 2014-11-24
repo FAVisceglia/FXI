@@ -39,6 +39,20 @@
 		72EF41421A1B955900140B9F /* 18 PM - Gel Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412E1A1B955900140B9F /* 18 PM - Gel Topper.m4v */; };
 		72EF41431A1B955900140B9F /* 19 PM - Smart Foam Alone1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412F1A1B955900140B9F /* 19 PM - Smart Foam Alone1.m4v */; };
 		72EF41441A1B955900140B9F /* 20 PM - Total Support Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41301A1B955900140B9F /* 20 PM - Total Support Topper.m4v */; };
+		72F6DD061A23ACEF00BF3E62 /* 01 FXI About - Main.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */; };
+		72F6DD071A23ACEF00BF3E62 /* 02 FXI About - Web.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */; };
+		72F6DD081A23ACEF00BF3E62 /* 03 FXI Who We Are.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */; };
+		72F6DD091A23ACEF00BF3E62 /* 04 FXI Journey.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */; };
+		72F6DD0A1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */; };
+		72F6DD0B1A23ACEF00BF3E62 /* 06 Aston Tour.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */; };
+		72F6DD0C1A23ACEF00BF3E62 /* 07 FXI at Nascar.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */; };
+		72F6DD0D1A23ACEF00BF3E62 /* 08 Recovery - Topper Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFF1A23ACEF00BF3E62 /* 08 Recovery - Topper Instructions.png */; };
+		72F6DD0E1A23ACEF00BF3E62 /* 09 Airflow - Aerus Max.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD001A23ACEF00BF3E62 /* 09 Airflow - Aerus Max.png */; };
+		72F6DD0F1A23ACEF00BF3E62 /* 10 Airflow - Ambiessence.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD011A23ACEF00BF3E62 /* 10 Airflow - Ambiessence.png */; };
+		72F6DD101A23ACEF00BF3E62 /* 11 Airflow - MaxPerm.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD021A23ACEF00BF3E62 /* 11 Airflow - MaxPerm.png */; };
+		72F6DD111A23ACEF00BF3E62 /* 12 Gel - MemGel Swirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD031A23ACEF00BF3E62 /* 12 Gel - MemGel Swirl.png */; };
+		72F6DD121A23ACEF00BF3E62 /* 13 Heat Management - GelTrix.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD041A23ACEF00BF3E62 /* 13 Heat Management - GelTrix.png */; };
+		72F6DD131A23ACEF00BF3E62 /* 14 PM - All Videos.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */; };
 		92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3D9941A0D09110023C29E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +108,20 @@
 		72EF412E1A1B955900140B9F /* 18 PM - Gel Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "18 PM - Gel Topper.m4v"; path = "Resources/18 PM - Gel Topper.m4v"; sourceTree = "<group>"; };
 		72EF412F1A1B955900140B9F /* 19 PM - Smart Foam Alone1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "19 PM - Smart Foam Alone1.m4v"; path = "Resources/19 PM - Smart Foam Alone1.m4v"; sourceTree = "<group>"; };
 		72EF41301A1B955900140B9F /* 20 PM - Total Support Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 PM - Total Support Topper.m4v"; path = "Resources/20 PM - Total Support Topper.m4v"; sourceTree = "<group>"; };
+		72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01 FXI About - Main.png"; path = "Resources/Thumbnails/01 FXI About - Main.png"; sourceTree = "<group>"; };
+		72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02 FXI About - Web.png"; path = "Resources/Thumbnails/02 FXI About - Web.png"; sourceTree = "<group>"; };
+		72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03 FXI Who We Are.png"; path = "Resources/Thumbnails/03 FXI Who We Are.png"; sourceTree = "<group>"; };
+		72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04 FXI Journey.png"; path = "Resources/Thumbnails/04 FXI Journey.png"; sourceTree = "<group>"; };
+		72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05 Molecules to Mattresses.png"; path = "Resources/Thumbnails/05 Molecules to Mattresses.png"; sourceTree = "<group>"; };
+		72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06 Aston Tour.png"; path = "Resources/Thumbnails/06 Aston Tour.png"; sourceTree = "<group>"; };
+		72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "07 FXI at Nascar.png"; path = "Resources/Thumbnails/07 FXI at Nascar.png"; sourceTree = "<group>"; };
+		72F6DCFF1A23ACEF00BF3E62 /* 08 Recovery - Topper Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08 Recovery - Topper Instructions.png"; path = "Resources/Thumbnails/08 Recovery - Topper Instructions.png"; sourceTree = "<group>"; };
+		72F6DD001A23ACEF00BF3E62 /* 09 Airflow - Aerus Max.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "09 Airflow - Aerus Max.png"; path = "Resources/Thumbnails/09 Airflow - Aerus Max.png"; sourceTree = "<group>"; };
+		72F6DD011A23ACEF00BF3E62 /* 10 Airflow - Ambiessence.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "10 Airflow - Ambiessence.png"; path = "Resources/Thumbnails/10 Airflow - Ambiessence.png"; sourceTree = "<group>"; };
+		72F6DD021A23ACEF00BF3E62 /* 11 Airflow - MaxPerm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "11 Airflow - MaxPerm.png"; path = "Resources/Thumbnails/11 Airflow - MaxPerm.png"; sourceTree = "<group>"; };
+		72F6DD031A23ACEF00BF3E62 /* 12 Gel - MemGel Swirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "12 Gel - MemGel Swirl.png"; path = "Resources/Thumbnails/12 Gel - MemGel Swirl.png"; sourceTree = "<group>"; };
+		72F6DD041A23ACEF00BF3E62 /* 13 Heat Management - GelTrix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "13 Heat Management - GelTrix.png"; path = "Resources/Thumbnails/13 Heat Management - GelTrix.png"; sourceTree = "<group>"; };
+		72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "14 PM - All Videos.png"; path = "Resources/Thumbnails/14 PM - All Videos.png"; sourceTree = "<group>"; };
 		92A3D9941A0D09110023C29E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -193,6 +221,20 @@
 		72D065F91A0BCD2400D0E47B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */,
+				72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */,
+				72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */,
+				72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */,
+				72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */,
+				72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */,
+				72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */,
+				72F6DCFF1A23ACEF00BF3E62 /* 08 Recovery - Topper Instructions.png */,
+				72F6DD001A23ACEF00BF3E62 /* 09 Airflow - Aerus Max.png */,
+				72F6DD011A23ACEF00BF3E62 /* 10 Airflow - Ambiessence.png */,
+				72F6DD021A23ACEF00BF3E62 /* 11 Airflow - MaxPerm.png */,
+				72F6DD031A23ACEF00BF3E62 /* 12 Gel - MemGel Swirl.png */,
+				72F6DD041A23ACEF00BF3E62 /* 13 Heat Management - GelTrix.png */,
+				72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */,
 				72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */,
 				72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */,
 				72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */,
@@ -324,21 +366,35 @@
 				72D065EE1A0BAC0E00D0E47B /* Main~ipad.storyboard in Resources */,
 				72EF41441A1B955900140B9F /* 20 PM - Total Support Topper.m4v in Resources */,
 				72EF413A1A1B955900140B9F /* 10 Airflow - Ambiessence.m4v in Resources */,
+				72F6DD101A23ACEF00BF3E62 /* 11 Airflow - MaxPerm.png in Resources */,
+				72F6DD0E1A23ACEF00BF3E62 /* 09 Airflow - Aerus Max.png in Resources */,
 				72EF413F1A1B955900140B9F /* 15 PM - Customizable Relief Topper.m4v in Resources */,
 				72D065D21A0BAA5700D0E47B /* Main.storyboard in Resources */,
+				72F6DD0A1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png in Resources */,
+				72F6DD081A23ACEF00BF3E62 /* 03 FXI Who We Are.png in Resources */,
+				72F6DD071A23ACEF00BF3E62 /* 02 FXI About - Web.png in Resources */,
+				72F6DD0D1A23ACEF00BF3E62 /* 08 Recovery - Topper Instructions.png in Resources */,
 				72EF41381A1B955900140B9F /* 08 Recovery - Topper Instructions.m4v in Resources */,
 				72EF41321A1B955900140B9F /* 02 FXI About - Web.m4v in Resources */,
 				72EF41401A1B955900140B9F /* 16 PM - Elite Performance Topper.m4v in Resources */,
 				72EF41411A1B955900140B9F /* 17 PM - Energizing Performance Topper.m4v in Resources */,
 				72D065D71A0BAA5700D0E47B /* LaunchScreen.xib in Resources */,
 				72EF413C1A1B955900140B9F /* 12 Gel - MemGel Swirl.m4v in Resources */,
+				72F6DD121A23ACEF00BF3E62 /* 13 Heat Management - GelTrix.png in Resources */,
+				72F6DD061A23ACEF00BF3E62 /* 01 FXI About - Main.png in Resources */,
+				72F6DD0F1A23ACEF00BF3E62 /* 10 Airflow - Ambiessence.png in Resources */,
 				72EF41311A1B955900140B9F /* 01 FXI About - Main.m4v in Resources */,
+				72F6DD0C1A23ACEF00BF3E62 /* 07 FXI at Nascar.png in Resources */,
 				72EF41391A1B955900140B9F /* 09 Airflow - Aerus Max.m4v in Resources */,
 				72EF41431A1B955900140B9F /* 19 PM - Smart Foam Alone1.m4v in Resources */,
+				72F6DD091A23ACEF00BF3E62 /* 04 FXI Journey.png in Resources */,
 				72EF41361A1B955900140B9F /* 06 Aston Tour.m4v in Resources */,
 				72D065D41A0BAA5700D0E47B /* Images.xcassets in Resources */,
 				72EF41351A1B955900140B9F /* 05 Molecules to Mattresses.m4v in Resources */,
+				72F6DD0B1A23ACEF00BF3E62 /* 06 Aston Tour.png in Resources */,
 				72EF413B1A1B955900140B9F /* 11 Airflow - MaxPerm.m4v in Resources */,
+				72F6DD131A23ACEF00BF3E62 /* 14 PM - All Videos.png in Resources */,
+				72F6DD111A23ACEF00BF3E62 /* 12 Gel - MemGel Swirl.png in Resources */,
 				72EF41371A1B955900140B9F /* 07 FXI at Nascar.m4v in Resources */,
 				72EF41421A1B955900140B9F /* 18 PM - Gel Topper.m4v in Resources */,
 				72EF41331A1B955900140B9F /* 03 FXI Who We Are.m4v in Resources */,

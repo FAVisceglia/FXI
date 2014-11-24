@@ -13,9 +13,6 @@
 
 #pragma mark - Private Properties
 
-// Read & write extension of the public thumbnail
-@property (copy, nonatomic, readwrite) NSData *thumbnail;
-
 // Read & write extension of the public title
 @property (copy, nonatomic, readwrite) NSString *title;
 
@@ -40,8 +37,8 @@
         // Local variable assignment
         _videoURL = videoURL;
         
-        // Set the video thumbnail
-        [self setThumbnail:[self getThumbnailForVideo:videoURL atTime:5]];
+/**        // Set the video thumbnail
+        [self setThumbnail:[self getThumbnailForVideo:videoURL atTime:5]];**/
         
         NSString *filePath = [videoURL path]; // The path of the video
         NSString *fileName = [[filePath lastPathComponent] stringByDeletingPathExtension]; // The file name (no extension) of the video
@@ -54,14 +51,34 @@
 #pragma mark - Initializers
 
 // Designated initializer; creates an FXI Video from a file at a given URL
-- (instancetype)initWithURL:(NSURL *)urlOfVideo
+- (instancetype)initWithURL:(NSURL *)urlOfVideo andThumbnailURL:(NSURL *)urlOfThumbnail
 {
     self = [super init];
     
     if (self)
     {
         [self setVideoURL:urlOfVideo];
+        
+        NSArray *validExtensions = @[@"png", @"PNG"];
+        NSString *fileExtension = [urlOfThumbnail pathExtension];
+        
+        if (urlOfThumbnail && [validExtensions containsObject:fileExtension])
+        {
+            [self setThumbnail:[NSData dataWithContentsOfURL:urlOfThumbnail]];
+        }
+        else
+        {
+            [self setThumbnail:[self getThumbnailForVideo:urlOfVideo atTime:3]];
+        }
     }
+    
+    return self;
+}
+
+// Designated initializer; creates an FXI Video from a file at a given URL
+- (instancetype)initWithURL:(NSURL *)urlOfVideo
+{
+    self = [self initWithURL:urlOfVideo andThumbnailURL:nil];
     
     return self;
 }
