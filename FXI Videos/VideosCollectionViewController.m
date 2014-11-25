@@ -10,6 +10,7 @@
 #import "FXIVideo.h"
 #import "VideosCollectionViewCell.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "VideosCollectionHeaderView.h"
 
 
 @interface VideosCollectionViewController ()
@@ -21,6 +22,8 @@
 
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
+
+@property (copy, nonatomic) NSMutableArray *mappingVideos;
 
 @end
 
@@ -57,6 +60,17 @@ static NSString * const reuseIdentifier = @"Video Cell";
     return _filteredVideos;
 }
 
+- (NSMutableArray *)mappingVideos
+{
+    // Lazy array instantiation
+    if (!_mappingVideos)
+    {
+        _mappingVideos = [[NSMutableArray alloc] init];
+    }
+    
+    return _mappingVideos;
+}
+
 #pragma mark - Delegation
 
 - (void)viewDidLoad
@@ -66,10 +80,11 @@ static NSString * const reuseIdentifier = @"Video Cell";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
     [layout setItemSize:CGSizeMake(180.0f, 200.0f)];
-    [layout setSectionInset:UIEdgeInsetsMake(20.0f, 20.0f, 20.0f, 20.0f)];
+    [layout setSectionInset:UIEdgeInsetsMake(20.0f, 20.0f, 0.0f, 20.0f)];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [layout setMinimumLineSpacing:10.0f];
+    [layout setMinimumLineSpacing:0.0f];
     [layout setMinimumInteritemSpacing:10.0f];
+//    [layout setHeaderReferenceSize:CGSizeMake(0.0f, 40.0f)];
     
     [[self collectionView] setCollectionViewLayout:layout];
     
@@ -214,7 +229,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
  
     fileURL = [[NSBundle mainBundle] URLForResource:@"15 Customizable Relief Topper"
@@ -224,7 +239,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     fileURL = [[NSBundle mainBundle] URLForResource:@"16 Elite Performance Topper"
@@ -234,7 +249,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     fileURL = [[NSBundle mainBundle] URLForResource:@"17 Energizing Performance Topper"
@@ -244,7 +259,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     fileURL = [[NSBundle mainBundle] URLForResource:@"18 Gel Topper"
@@ -254,7 +269,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     fileURL = [[NSBundle mainBundle] URLForResource:@"19 Smart Foam Alone1"
@@ -264,7 +279,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     fileURL = [[NSBundle mainBundle] URLForResource:@"20 Total Support Topper"
@@ -274,7 +289,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         video = [[FXIVideo alloc] initWithURL:fileURL
                               andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"14 PM - All Videos"
                                                                       withExtension:@"png"]];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
     
@@ -300,13 +315,20 @@ static NSString * const reuseIdentifier = @"Video Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [[self videos] count];
+    if (section == 0)
+    {
+        return [[self videos] count];
+    }
+    else
+    {
+        return [[self mappingVideos] count];
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -317,7 +339,14 @@ static NSString * const reuseIdentifier = @"Video Cell";
     // Configure the cell
     
     FXIVideo *video = nil;
-    video = [[self videos] objectAtIndex:[indexPath row]];
+    if ([indexPath section] == 0)
+    {
+        video = [[self videos] objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        video = [[self mappingVideos] objectAtIndex:[indexPath row]];
+    }
 
     // Set cells
     
@@ -342,14 +371,43 @@ static NSString * const reuseIdentifier = @"Video Cell";
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableView = nil;
+    
+    VideosCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                                withReuseIdentifier:@"Header View"
+                                                                                       forIndexPath:indexPath];
+    NSString *sectionTitle = nil;
+    if ([indexPath section] == 1)
+    {
+        sectionTitle = @"PRESSURE MAPPING VIDEOS";
+    }
+    
+    [[headerView sectionTitleLabel] setText:sectionTitle];
+    
+    reusableView = headerView;
+
+    
+    return reusableView;
+}
+
 - (IBAction)playVideo:(UIButton *)sender
 {
     if ([[[sender superview] superview] isKindOfClass:[VideosCollectionViewCell class]])
     {
         VideosCollectionViewCell *cell = (VideosCollectionViewCell *)[[sender superview] superview];
         NSIndexPath *indexPath = [[self collectionView] indexPathForCell:cell];
+        FXIVideo *video = nil;
         
-        FXIVideo *video = [[self videos] objectAtIndex:[indexPath row]];
+        if ([indexPath section] == 0)
+        {
+            video = [[self videos] objectAtIndex:[indexPath row]];
+        }
+        else
+        {
+            video = [[self mappingVideos] objectAtIndex:[indexPath row]];
+        }
         
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[video videoURL]];
         [[player moviePlayer] setFullscreen:YES
@@ -362,6 +420,18 @@ static NSString * const reuseIdentifier = @"Video Cell";
 
 
 #pragma mark <UICollectionViewDelegate>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    if (section == 1)
+    {
+        return CGSizeMake(0.0f, 50.0f);
+    }
+    else
+    {
+        return CGSizeZero;
+    }
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
