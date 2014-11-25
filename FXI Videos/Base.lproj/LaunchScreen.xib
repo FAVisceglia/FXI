@@ -44,14 +44,14 @@
                     <exclude reference="eKo-v4-eIt"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="CQi-9J-AB2"/>
-                    <exclude reference="FAg-ip-GJR"/>
-                    <exclude reference="npk-YE-hOy"/>
-                    <exclude reference="vAy-ap-umS"/>
                     <exclude reference="40J-ev-Ifm"/>
                     <exclude reference="jHV-fh-lbC"/>
                     <exclude reference="n4h-nI-TBH"/>
                     <exclude reference="rLB-8J-4qd"/>
+                    <exclude reference="CQi-9J-AB2"/>
+                    <exclude reference="FAg-ip-GJR"/>
+                    <exclude reference="npk-YE-hOy"/>
+                    <exclude reference="vAy-ap-umS"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">

@@ -20,6 +20,12 @@
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
 
+// Array of section two objects
+@property (copy, nonatomic) NSMutableArray *mappingVideos;
+
+// Array of all videos
+@property (copy, nonatomic) NSArray *allVideos;
+
 @end
 
 
@@ -56,6 +62,28 @@
     }
     
     return _filteredVideos;
+}
+
+- (NSMutableArray *)mappingVideos
+{
+    // Lazy array instantiation
+    if (!_mappingVideos)
+    {
+        _mappingVideos = [[NSMutableArray alloc] init];
+    }
+    
+    return _mappingVideos;
+}
+
+- (NSArray *)allVideos
+{
+    // Lazy array instantiation
+    if (!_allVideos)
+    {
+        _allVideos = [[NSArray alloc] init];
+    }
+    
+    return _allVideos;
 }
 
 #pragma mark - Delegation
@@ -123,7 +151,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Recovery - Topper Instructions"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Topper Instructions"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -131,7 +159,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Airflow - Aerus Max"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Aerus Max"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -139,7 +167,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Airflow - Ambiessence"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Ambiessence"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -147,7 +175,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"11 Airflow - MaxPerm"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"11 MaxPerm"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -155,7 +183,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"12 Gel - MemGel Swirl"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"12 MemGel Swirl"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -163,7 +191,7 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"13 Heat Management - GelTrix"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"13 GelTrix"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -171,61 +199,63 @@
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"14 PM - Back Support Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"14 Back Support Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"15 PM - Customizable Relief Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"15 Customizable Relief Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"16 PM - Elite Performance Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"16 Elite Performance Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"17 PM - Energizing Performance Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"17 Energizing Performance Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"18 PM - Gel Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"18 Gel Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"19 PM - Smart Foam Alone1"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"19 Smart Foam Alone1"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"20 PM - Total Support Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"20 Total Support Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL];
-        [[self videos] addObject:video];
+        [[self mappingVideos] addObject:video];
     }
+    
+    [self setAllVideos:[[self videos] arrayByAddingObjectsFromArray:[self mappingVideos]]];
         
     // Hides search bar on view load by offsetting the table (scrolling it down)
     [[self tableView] setContentOffset:CGPointMake(0, [[[self searchDisplayController] searchBar] frame].size.height - [[self tableView] contentOffset].y)];
@@ -280,7 +310,14 @@
 // Return the number of sections in the table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
 }
 
 // Return the number of rows in a given section
@@ -292,12 +329,16 @@
         return [[self filteredVideos] count];
     }
     // Else (the tableview is normal), use full array count
-    else
+    else if (section == 0)
     {
         return [[self videos] count];
     }
+    else
+    {
+        return [[self mappingVideos] count];
+    }
 }
-/**
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *sectionTitle;
@@ -305,14 +346,17 @@
     switch (section)
     {
         case 0:
-            sectionTitle = @"Technical Service";
+            sectionTitle = nil;
+            break;
+        case 1:
+            sectionTitle = @"Pressure Mapping Videos";
             break;
         default:
             sectionTitle = nil;
     }
     
     return sectionTitle;
-}**/
+}
 
 // Return the cell (data) at a given index path (populates the table)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -327,9 +371,13 @@
     {
         video = [[self filteredVideos] objectAtIndex:[indexPath row]];
     }
-    else
+    else if ([indexPath section] == 0)
     {
         video = [[self videos] objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        video = [[self mappingVideos] objectAtIndex:[indexPath row]];
     }
     
 /**    // Set cell contents and parameters
@@ -382,6 +430,11 @@
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
 //    [view setTintColor:[UIColor colorWithRed:70.0f/255.0f green:133.0f/255.0f blue:197.0f/255.0f alpha:1.0f]];
+    UITableViewHeaderFooterView *sectionHeader = (UITableViewHeaderFooterView *)view;
+    [[sectionHeader textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0)
+                                                           green:(52.0/255.0)
+                                                            blue:(88.0/255.0)
+                                                           alpha:1.0f]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -392,9 +445,13 @@
     {
         video = [[self filteredVideos] objectAtIndex:[indexPath row]];
     }
-    else
+    else if ([indexPath section] == 0)
     {
         video = [[self videos] objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        video = [[self mappingVideos] objectAtIndex:[indexPath row]];
     }
 
     MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[video videoURL]];
@@ -479,7 +536,7 @@
     // "name" refers to the property to search against
     // "contains[c] means use a CONTAIN search logic, case-insensitive
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title contains[c] %@", searchText];
-    [self setFilteredVideos:[[self videos] filteredArrayUsingPredicate:predicate]];
+    [self setFilteredVideos:[[self allVideos] filteredArrayUsingPredicate:predicate]];
 }
 
 @end

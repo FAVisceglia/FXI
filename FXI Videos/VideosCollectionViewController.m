@@ -147,67 +147,67 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Recovery - Topper Instructions"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Topper Instructions"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"08 Recovery - Topper Instructions"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"08 Topper Instructions"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Airflow - Aerus Max"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Aerus Max"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"09 Airflow - Aerus Max"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"09 Aerus Max"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Airflow - Ambiessence"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Ambiessence"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"10 Airflow - Ambiessence"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"10 Ambiessence"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"11 Airflow - MaxPerm"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"11 MaxPerm"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"11 Airflow - MaxPerm"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"11 MaxPerm"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"12 Gel - MemGel Swirl"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"12 MemGel Swirl"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"12 Gel - MemGel Swirl"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"12 MemGel Swirl"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"13 Heat Management - GelTrix"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"13 GelTrix"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
         video = [[FXIVideo alloc] initWithURL:fileURL
-                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"13 Heat Management - GelTrix"
+                              andThumbnailURL:[[NSBundle mainBundle] URLForResource:@"13 GelTrix"
                                                                       withExtension:@"png"]];
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"14 PM - Back Support Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"14 Back Support Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -217,7 +217,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
  
-    fileURL = [[NSBundle mainBundle] URLForResource:@"15 PM - Customizable Relief Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"15 Customizable Relief Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -227,7 +227,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"16 PM - Elite Performance Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"16 Elite Performance Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -237,7 +237,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"17 PM - Energizing Performance Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"17 Energizing Performance Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -247,7 +247,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"18 PM - Gel Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"18 Gel Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -257,7 +257,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"19 PM - Smart Foam Alone1"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"19 Smart Foam Alone1"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
@@ -267,7 +267,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[self videos] addObject:video];
     }
     
-    fileURL = [[NSBundle mainBundle] URLForResource:@"20 PM - Total Support Topper"
+    fileURL = [[NSBundle mainBundle] URLForResource:@"20 Total Support Topper"
                                       withExtension:@"m4v"];
     if (fileURL)
     {
