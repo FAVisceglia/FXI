@@ -56,8 +56,8 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-J6-v5U">
-                                    <rect key="frame" x="28" y="28" width="712" height="14"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                    <rect key="frame" x="28" y="25" width="712" height="17"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                     <color key="textColor" red="0.070588235289999995" green="0.20392156859999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>

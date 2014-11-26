@@ -10,4 +10,16 @@
 
 @implementation VideosCollectionHeaderView
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
+    [[self layer] setMasksToBounds:NO];
+    [[self layer] setShadowColor:[UIColor darkGrayColor].CGColor];
+    [[self layer] setShadowOffset:CGSizeMake(0.0f, 2.5f)];
+    [[self layer] setShadowOpacity:0.5f];
+    [[self layer] setShadowPath:shadowPath.CGPath];
+}
+
 @end

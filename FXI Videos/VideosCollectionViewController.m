@@ -382,9 +382,19 @@ static NSString * const reuseIdentifier = @"Video Cell";
     if ([indexPath section] == 1)
     {
         sectionTitle = @"PRESSURE MAPPING VIDEOS";
+        
+        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:sectionTitle
+                                                                               attributes:@{ NSKernAttributeName : @(0.25f),
+                                                                                             NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline] }];
+        
+        [[headerView sectionTitleLabel] setAttributedText:attributedString];
+    }
+    else
+    {
+        [[headerView sectionTitleLabel] setText:sectionTitle];
     }
     
-    [[headerView sectionTitleLabel] setText:sectionTitle];
+//    [[headerView sectionTitleLabel] setText:sectionTitle];
     
     reusableView = headerView;
 
