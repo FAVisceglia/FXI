@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
+
+/**
+ Controller for main collection view on iPad devices
+ 
+ @inherit UICollectionViewController
+ @conform UISearchBarDelegate
+ @confrom UISeachDisplayDelegate
+ */
 @interface VideosCollectionViewController : UICollectionViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end

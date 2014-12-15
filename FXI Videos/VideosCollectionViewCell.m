@@ -13,6 +13,8 @@
 @end
 
 
+#pragma - mark
+
 @implementation VideosCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame

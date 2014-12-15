@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+
+/** 
+ Controller for main table view on iPhone devices
+    
+ @inherit UITableViewController
+ @conform UISearchBarDelegate
+ @confrom UISeachDisplayDelegate
+ */
 @interface VideosTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end
