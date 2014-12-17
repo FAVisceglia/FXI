@@ -491,7 +491,7 @@ static NSString * const reuseIdentifier = @"Video Cell";
 }
 
 
-#pragma mark - Collection View Delegation
+#pragma mark - Collection View Flow Layout Delegation
 
 /**
  Return the size of the header for the given section

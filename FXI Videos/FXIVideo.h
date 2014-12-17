@@ -30,6 +30,9 @@
 // The title of the video (read only)
 @property (copy, nonatomic, readonly) NSString *title;
 
+// The category of the video
+@property (copy, nonatomic) NSString *category;
+
 
 #pragma mark - Public Methods
 

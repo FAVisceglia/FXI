@@ -17,6 +17,6 @@
  @conform UISearchBarDelegate
  @confrom UISeachDisplayDelegate
  */
-@interface VideosCollectionViewController : UICollectionViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface VideosCollectionViewController : UICollectionViewController
 
 @end

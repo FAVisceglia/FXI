@@ -279,6 +279,11 @@
         [[self mappingVideos] addObject:video];
     }
     
+    for (id video in [self mappingVideos])
+    {
+        [video setCategory:@"Pressure Mapping"];
+    }
+    
     // Combine all the videos into a separate array
     [self setAllVideos:[[self videos] arrayByAddingObjectsFromArray:[self mappingVideos]]];
         
@@ -549,8 +554,10 @@
     
     // Use a predicate to parse search query and populate filtered results
     // "title" refers to the property to search against
-    // "contains[c]" means use a containing search logic, case-insensitive
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title contains[c] %@", searchText];
+    // "CONTAINS[c]" means that if the title contains the search query (case-insensitive)
+    // "category" refers to an additional property to search against, using a logical OR
+    // "BEGINSWITH[c] means that if the category begins with the search query (case-insensitive)
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ OR category BEGINSWITH[c] %@", searchText, searchText];
     [self setFilteredVideos:[[self allVideos] filteredArrayUsingPredicate:predicate]];
 }
 
