@@ -8,12 +8,20 @@
 
 #import "VideosCollectionViewCell.h"
 
-
 @interface VideosCollectionViewCell()
 
 @end
 
 
+#pragma - mark
+
 @implementation VideosCollectionViewCell
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    return self;
+}
 
 @end

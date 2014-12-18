@@ -9,32 +9,47 @@
 #import "VideosTableViewController.h"
 #import "FXIVideo.h"
 
+
 @interface VideosTableViewController()
 
 #pragma mark - Private Properties
 
 // Array of the objects to represent in the table
 @property (copy, nonatomic) NSMutableArray *videos;
+
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
 
+// Array of section two objects
+@property (copy, nonatomic) NSMutableArray *mappingVideos;
+
+// Array of all videos
+@property (copy, nonatomic) NSArray *allVideos;
+
 @end
+
 
 #pragma mark
 
 @implementation VideosTableViewController
 
+
 #pragma mark - Constants
 
-// Convert to enum?
+// Buffer space to be added between cells in the table view
 #define CELL_BUFFER_SPACING 15.0
+
 
 #pragma mark - Getters
 
-// Getter for the faqs array
+/**
+ Getter for the private videos array
+ 
+ @return The local array variable, fully instantiated
+ */
 - (NSMutableArray *)videos
 {
-    // Lazy array instantiation
+    // Lazy array instantiation (instantiates the array if not already done)
     if (!_videos)
     {
         _videos = [[NSMutableArray alloc] init];
@@ -43,10 +58,14 @@
     return _videos;
 }
 
-// Getter for the filtered faqs array
+/**
+ Getter for the private filtered videos array
+ 
+ @return The local array variable, fully instantiated
+ */
 - (NSArray *)filteredVideos
 {
-    // Lazy array instantiation
+    // Lazy array instantiation (instantiates the array if not already done)
     if (!_filteredVideos)
     {
         _filteredVideos = [[NSArray alloc] init];
@@ -55,36 +74,219 @@
     return _filteredVideos;
 }
 
-#pragma mark - Delegation
+/**
+ Getter for the private mapping videos array
+ 
+ @return The local array variable, fully instantiated
+ */
+- (NSMutableArray *)mappingVideos
+{
+    // Lazy array instantiation (instantiates the array if not already done)
+    if (!_mappingVideos)
+    {
+        _mappingVideos = [[NSMutableArray alloc] init];
+    }
+    
+    return _mappingVideos;
+}
 
-// View controller lifecycle; message sent whenever view is done loading
+/**
+ Getter for the private all videos array
+ 
+ @return The local array variable, fully instantiated
+ */
+- (NSArray *)allVideos
+{
+    // Lazy array instantiation (instantiates the array if not already done)
+    if (!_allVideos)
+    {
+        _allVideos = [[NSArray alloc] init];
+    }
+    
+    return _allVideos;
+}
+
+
+#pragma mark - View Controller Delegation
+
+/**
+ View-controller-lifecycle message sent whevener the root view is loaded
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-/**    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error = NULL;
-    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [filePaths firstObject];
+    // The video to be added to the array
+    FXIVideo *video = nil;
     
-    NSString *videoPath = [documentsDir stringByAppendingPathComponent:@"test.MOV"];
-    
-    if ([fileManager fileExistsAtPath:videoPath] == NO)
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"01 FXI About - Main"
+                                             withExtension:@"m4v"];
+    if (fileURL)
     {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"MOV"];
-        [fileManager copyItemAtPath:resourcePath toPath:videoPath error:&error];
-    }**/
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"MOV"];
-    unsigned long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
-    NSLog(@"%llul", fileSize);
-    NSLog(@"%@", path);
-    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"MOV"];
+    fileURL = [[NSBundle mainBundle] URLForResource:@"02 FXI About - Web"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
-    FXIVideo *video = [[FXIVideo alloc] initWithURL:fileURL];
-    [[self videos] addObject:video];
-    NSLog(@"Title: %@", [[[self videos] objectAtIndex:0] title]);
+    fileURL = [[NSBundle mainBundle] URLForResource:@"03 FXI Who We Are"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
     
+    fileURL = [[NSBundle mainBundle] URLForResource:@"04 FXI Journey"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"05 Molecules to Mattresses"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"06 Aston Tour"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"07 FXI at Nascar"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"08 Topper Instructions"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"09 Aerus Max"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"10 Ambiessence"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"11 MaxPerm"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"12 MemGel Swirl"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"13 GelTrix"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self videos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"14 Back Support Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"15 Customizable Relief Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"16 Elite Performance Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"17 Energizing Performance Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"18 Gel Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"19 Smart Foam Alone1"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    fileURL = [[NSBundle mainBundle] URLForResource:@"20 Total Support Topper"
+                                      withExtension:@"m4v"];
+    if (fileURL)
+    {
+        video = [[FXIVideo alloc] initWithURL:fileURL];
+        [[self mappingVideos] addObject:video];
+    }
+    
+    for (id video in [self mappingVideos])
+    {
+        [video setCategory:@"Pressure Mapping"];
+    }
+    
+    // Combine all the videos into a separate array
+    [self setAllVideos:[[self videos] arrayByAddingObjectsFromArray:[self mappingVideos]]];
+        
     // Hides search bar on view load by offsetting the table (scrolling it down)
     [[self tableView] setContentOffset:CGPointMake(0, [[[self searchDisplayController] searchBar] frame].size.height - [[self tableView] contentOffset].y)];
     
@@ -93,36 +295,41 @@
     [[[self searchDisplayController] searchBar] setAutocapitalizationType:UITextAutocapitalizationTypeNone];
 }
 
-// View controller lifecycle; message sent whenever view will appear on screen
+/**
+ View controller lifecycle message sent whenever the root view will appear on screen
+ */
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    /**
-    // Add a notification that calls the given method when the user changes their font settings
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(preferredFontsChanged:)
-                                                 name:UIContentSizeCategoryDidChangeNotification
-                                               object:nil];**/
 }
 
-// View controller lifecycle; message sent whenever view will disappear off screen
+/**
+ View controller lifecycle message sent whenever the root view will disappear from screen
+ */
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    /**
-    // Removes the notification (don't listen when the view isn't on screen)
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIContentSizeCategoryDidChangeNotification
-                                                  object:nil];**/
 }
 
-// View controller lifecycle; message sent when OS has a memory warning
+/**
+ View controller lifecycle message sent when the OS issues a memory warning
+ */
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
 
-// Message sent when search string (query) changes
+
+#pragma mark - Search Display Delegation
+
+/**
+ Message sent whenever the text in the search bar changes
+ 
+ @param controller: The UISearchDisplayController for the search bar
+ @param searchString: The text in the search bar
+ 
+ @return Whether or not to reload the table cells
+ */
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     // Run the filtering algorithm
@@ -133,185 +340,225 @@
     return YES;
 }
 
+
 #pragma mark - Table View Data Source
 
-// Return the number of sections in the table view
+/**
+ Returns the number of sections in the main table view
+ 
+ @param tableView: The table view for which the data is sourced
+ 
+ @return The number of sections in the table view
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    // If the active table view is the search results, there is only 1 section (the results section)
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    {
+        return 1;
+    }
+    // Else (if the table view is the main one), there are 2 sections (regular videos and mapping videos)
+    else
+    {
+        return 2;
+    }
 }
 
-// Return the number of rows in a given section
+/**
+ Returns the number of rows in a given section
+ 
+ @param tableView: The table view for which the data is sourced
+ @param section: The section in the table
+ 
+ @return The number of rows in the section
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // If the tableview being passed is the search results table, use filtered count
+    // If the active table view is the search results, return the count of the filtered search results array
     if (tableView == [[self searchDisplayController] searchResultsTableView])
     {
         return [[self filteredVideos] count];
     }
-    // Else (the tableview is normal), use full array count
-    else
+    // Else if this is the first section, return the count of the main array
+    else if (section == 0)
     {
         return [[self videos] count];
     }
+    // Else (if this is the second section), return the count of the mapping videos array
+    else
+    {
+        return [[self mappingVideos] count];
+    }
 }
+
 /**
+ Returns the title for a given section
+ 
+ @param tableView: The table view for which the data is sourced
+ @param section: The section in the table
+ 
+ @return The title of the given section
+ */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    // The title of the section
     NSString *sectionTitle;
     
     switch (section)
     {
+        // First section
         case 0:
-            sectionTitle = @"Technical Service";
+            sectionTitle = nil;
             break;
+        // Second section
+        case 1:
+            sectionTitle = @"Pressure Mapping Videos";
+            break;
+        // All other sections
         default:
             sectionTitle = nil;
     }
     
     return sectionTitle;
-}**/
+}
 
-// Return the cell (data) at a given index path (populates the table)
+/**
+ Returns the cell for the given indexpath
+ 
+ @param tableView: The table view for which the data is sourced
+ @param indexPath: The section and row of the cell
+ 
+ @return The cell to be used in the given indexpath
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Reuse the cell identified in the storyboard for all table cells
+    // Reuse the storyboard cells with the given identifier
     UITableViewCell *cell = [[self tableView] dequeueReusableCellWithIdentifier:@"Video Cell"];
     
-    NSLog(@"HELLLLOOOOOO");
-    
+    // The video that will be represented in the cell
     FXIVideo *video = nil;
     
-    // Determine the object in the table view (or search results table view) for the given indexpath
+    // If the active table view is the search results, get the corresponding video from the search results array
     if (tableView == [[self searchDisplayController] searchResultsTableView])
     {
         video = [[self filteredVideos] objectAtIndex:[indexPath row]];
     }
-    else
+    // Else if this is the first section, get the corresponding video from the main array
+    else if ([indexPath section] == 0)
     {
         video = [[self videos] objectAtIndex:[indexPath row]];
     }
+    // Else (if this is the second section), get the corresponding video from the mapping array
+    else
+    {
+        video = [[self mappingVideos] objectAtIndex:[indexPath row]];
+    }
     
-    NSLog(@"Title for cell: %@", [video title]);
-    
-/**    // Set cell contents and parameters
-    [[cell textLabel] setLineBreakMode:NSLineBreakByWordWrapping];
-    [[cell textLabel] setNumberOfLines:0];
-    [[cell textLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];**/
-    [[cell textLabel] setText:[video title]];
+    // Set the text and text color for the label of the cell (to the video's title and FXI dark blue, respectfully)
+    [[cell textLabel] setText:[[video title] substringFromIndex:3]];
+    [[cell textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0)
+                                                   green:(52.0/255.0)
+                                                    blue:(88.0/255.0)
+                                                   alpha:1.0f]];
     
     return cell;
 }
 
+
 #pragma mark - Table View Delegate
 
-// Return the row height for a given indexpath (cell)
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    FXIVideo *test = nil;
-    
-    // Same logic as before, get the object at the indexpath of either search results or regular table
-    if (tableView == [[self searchDisplayController] searchResultsTableView])
-    {
-        test = [[self filteredVideos] objectAtIndex:[indexPath row]];
-    }
-    else
-    {
-        test = [[self videos] objectAtIndex:[indexPath row]];
-    }
-    
-    // The string that will go in the cell
-    NSString *cellText = [test title];
-    // The attributes to apply to the string (which can affect its size)
-    NSDictionary *attributes = @{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody] };
-    // The frame of the text, determined by getting the rect that will contain the text
-    UITableViewCell *cell = [[self tableView] dequeueReusableCellWithIdentifier:@"Video Cell"];
-    CGRect frame = [cellText boundingRectWithSize:CGSizeMake((CGRectGetWidth([cell contentView].bounds)), CGFLOAT_MAX)
-                                          options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
-                                       attributes:attributes
-                                          context:nil];
-    // This cell serves no purpose except to establish the content view, so dealloc manually
-    cell = nil;
-    
-    // Return the height (rounded up to integer) plus a static buffer
-    return ceilf(CGRectGetHeight(frame) + CELL_BUFFER_SPACING);
-}
-
+/**
+ Table view message sent when a section header view will be displayed
+ 
+ @param tableView: The table view for which the section
+ @param section: The section for which the header view is assigned
+ */
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
-//    [view setTintColor:[UIColor colorWithRed:70.0f/255.0f green:133.0f/255.0f blue:197.0f/255.0f alpha:1.0f]];
+    // Set the text color for all the section header view to FXI dark blue
+    UITableViewHeaderFooterView *sectionHeader = (UITableViewHeaderFooterView *)view;
+    [[sectionHeader textLabel] setTextColor:[UIColor colorWithRed:(18.0/255.0)
+                                                            green:(52.0/255.0)
+                                                             blue:(88.0/255.0)
+                                                            alpha:1.0f]];
 }
 
-#pragma mark - Navigation
 /**
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ Table view message sent when a user selects a cell
+ 
+ @param tableView: The table view in which a cell was selected
+ @param indexPath: The section and row of the selected cell
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Invoked when a segue in the navigation controller heirarchy occurs
+    // The FXI video that corresponds to the selected cell
+    FXIVideo *video = nil;
     
-    // If the segue is the expected (ID from storyboard)
-    if ([[segue identifier] isEqualToString:@"Segue to Answer"])
+    // If active table view is the search results, grab selected video from search results array
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
     {
-        // Get the viewcontroller we are going to
-        FAQAnswerViewController *avc = [segue destinationViewController];
-        // The cell's object
-        FrequentlyAskedQuestion *faq = nil;
-        // The cell's index
-        NSIndexPath *indexPath = nil;
-        
-        // If using the search results table view...
-        if (self.searchDisplayController.active)
-        {
-            // Get the indexpath for the selected row
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            // Get the object at the selected row index
-            faq = [[self filteredFaqs] objectAtIndex:[indexPath row]];
-        }
-        // Else using the normal table view...
-        else
-        {
-            // Same logic as above
-            indexPath = [self.tableView indexPathForSelectedRow];
-            faq = [[self faqs] objectAtIndex:[indexPath row]];
-        }
-        
-        // Set a public property of the destination view controller to be used in that view
-        [avc setFaq:faq];
+        video = [[self filteredVideos] objectAtIndex:[indexPath row]];
     }
-}**/
+    // Else if selected cell is in the first section, grab selected video from main array
+    else if ([indexPath section] == 0)
+    {
+        video = [[self videos] objectAtIndex:[indexPath row]];
+    }
+    // Else (if selected cell is in the second section), grab the selected video from mapping array
+    else
+    {
+        video = [[self mappingVideos] objectAtIndex:[indexPath row]];
+    }
+
+    // Initialize a movie player controller with the selected video and set playback settings
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[video videoURL]];
+    [[player moviePlayer] setFullscreen:YES
+                               animated:YES];
+    [[player moviePlayer] setScalingMode:MPMovieScalingModeAspectFit];
+    
+    // Present the movie player controller with animation
+    [self presentMoviePlayerViewControllerAnimated:player];
+}
+
 
 #pragma mark - Target Actions
+
 /**
+ Action triggered when the search button is touched
+ 
+ @param sender: The button that was touched
+ */
 - (IBAction)searchButtonTouched:(UIBarButtonItem *)sender
 {
-    [[self tableView] setContentOffset:CGPointMake(0.0f, -self.tableView.contentInset.top) animated:NO];
-    [[self searchDisplayController] setActive:YES animated:YES];
+    // Activate the search bar and search display controller with animation
+    [[self tableView] setContentOffset:CGPointMake(0.0f, -self.tableView.contentInset.top)
+                              animated:NO];
+    [[self searchDisplayController] setActive:YES
+                                     animated:YES];
     [[[self searchDisplayController] searchBar] becomeFirstResponder];
-}**/
+}
+
 
 #pragma mark - Private Methods
-/**
-- (void)preferredFontsChanged:(NSNotificationCenter *)notification
-{
-    // Called whenever a UIContentSizeCategoryDidChangeNotification is sent by the system
-    // Addresses situations where the view is already loaded and then the user changes their font accessibility options
-    
-    // Reload the table view (the table view data source grabs the preferred fonts)
-    [[self tableView] reloadData];
-}**/
 
+/**
+ Filter the video results based on the search query
+ 
+ @param searchText: The search query to filter by
+ @param scope: The search scope to filter in
+ */
 - (void)filterContentForSearchText:(NSString *)searchText inScope:(NSString *)scope
 {
-    // Filtering algorithm for search queries
-    
-    // Reset any previous results
+    // Reset and clear any previous search results
     [self setFilteredVideos:nil];
     
     // Use a predicate to parse search query and populate filtered results
-    // "name" refers to the property to search against
-    // "contains[c] means use a CONTAIN search logic, case-insensitive
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title contains[c] %@", searchText];
-    [self setFilteredVideos:[[self videos] filteredArrayUsingPredicate:predicate]];
+    // "title" refers to the property to search against
+    // "CONTAINS[c]" means that if the title contains the search query (case-insensitive)
+    // "category" refers to an additional property to search against, using a logical OR
+    // "BEGINSWITH[c] means that if the category begins with the search query (case-insensitive)
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ OR category BEGINSWITH[c] %@", searchText, searchText];
+    [self setFilteredVideos:[[self allVideos] filteredArrayUsingPredicate:predicate]];
 }
 
 @end

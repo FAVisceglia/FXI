@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kHe-BO-fHe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kHe-BO-fHe">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
@@ -8,11 +9,11 @@
         <scene sceneID="MiN-yv-D9H">
             <objects>
                 <tableViewController id="95H-PF-mpl" customClass="VideosTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iw2-BF-xjK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="iw2-BF-xjK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="awk-31-CjB">
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search videos" id="awk-31-CjB">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -26,9 +27,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5V-Xy-BaU" id="6Xi-MX-BbY">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="J3G-LA-9xz" kind="push" identifier="Segue to Video" id="fah-0K-uZC"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +34,13 @@
                             <outlet property="delegate" destination="95H-PF-mpl" id="jpm-sV-bb9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FXI Videos" id="Gfi-4K-EjO"/>
+                    <navigationItem key="navigationItem" title="FXI Videos" id="Gfi-4K-EjO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="TQR-HX-jJX">
+                            <connections>
+                                <action selector="searchButtonTouched:" destination="95H-PF-mpl" id="z8N-5L-jNz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="QKx-Z5-3sM" id="Ift-zQ-5Pg"/>
                     </connections>
@@ -54,25 +58,6 @@
             </objects>
             <point key="canvasLocation" x="627" y="467"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="V7w-u7-CMC">
-            <objects>
-                <viewController id="J3G-LA-9xz" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zMi-OP-2IZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="7hV-KD-8RR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7AB-7j-i5m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lEB-9w-Lgl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ueA-53-X5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1133" y="467"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xhm-Gh-xh4">
             <objects>
@@ -80,6 +65,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mDF-RO-89v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <color key="textColor" red="0.070588235294117646" green="0.20392156862745098" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="95H-PF-mpl" kind="relationship" relationship="rootViewController" id="QfD-4s-RmG"/>
@@ -95,4 +84,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.27450980392156865" green="0.52156862745098043" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
 </document>

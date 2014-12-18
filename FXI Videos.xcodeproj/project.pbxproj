@@ -17,9 +17,44 @@
 		72D065F61A0BB1A600D0E47B /* FXIVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065F51A0BB1A600D0E47B /* FXIVideo.m */; };
 		72D065F81A0BBE4200D0E47B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D065F71A0BBE4200D0E47B /* AVFoundation.framework */; };
 		72D065FF1A0BCE1700D0E47B /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065FE1A0BCE1700D0E47B /* VideosTableViewController.m */; };
-		72D066011A0BDA7000D0E47B /* test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 72D066001A0BDA7000D0E47B /* test.MOV */; };
 		72D066041A0BF6FF00D0E47B /* VideosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */; };
 		72D066071A0BFFD800D0E47B /* VideosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */; };
+		72D40E111A24E44B0038BB79 /* VideosCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D40E101A24E44B0038BB79 /* VideosCollectionHeaderView.m */; };
+		72EF41311A1B955900140B9F /* 01 FXI About - Main.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */; };
+		72EF41321A1B955900140B9F /* 02 FXI About - Web.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */; };
+		72EF41331A1B955900140B9F /* 03 FXI Who We Are.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */; };
+		72EF41341A1B955900140B9F /* 04 FXI Journey.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */; };
+		72EF41351A1B955900140B9F /* 05 Molecules to Mattresses.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */; };
+		72EF41361A1B955900140B9F /* 06 Aston Tour.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */; };
+		72EF41371A1B955900140B9F /* 07 FXI at Nascar.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */; };
+		72EF41381A1B955900140B9F /* 08 Topper Instructions.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41241A1B955900140B9F /* 08 Topper Instructions.m4v */; };
+		72EF41391A1B955900140B9F /* 09 Aerus Max.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41251A1B955900140B9F /* 09 Aerus Max.m4v */; };
+		72EF413A1A1B955900140B9F /* 10 Ambiessence.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41261A1B955900140B9F /* 10 Ambiessence.m4v */; };
+		72EF413B1A1B955900140B9F /* 11 MaxPerm.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41271A1B955900140B9F /* 11 MaxPerm.m4v */; };
+		72EF413C1A1B955900140B9F /* 12 MemGel Swirl.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41281A1B955900140B9F /* 12 MemGel Swirl.m4v */; };
+		72EF413D1A1B955900140B9F /* 13 GelTrix.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41291A1B955900140B9F /* 13 GelTrix.m4v */; };
+		72EF413E1A1B955900140B9F /* 14 Back Support Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412A1A1B955900140B9F /* 14 Back Support Topper.m4v */; };
+		72EF413F1A1B955900140B9F /* 15 Customizable Relief Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412B1A1B955900140B9F /* 15 Customizable Relief Topper.m4v */; };
+		72EF41401A1B955900140B9F /* 16 Elite Performance Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412C1A1B955900140B9F /* 16 Elite Performance Topper.m4v */; };
+		72EF41411A1B955900140B9F /* 17 Energizing Performance Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412D1A1B955900140B9F /* 17 Energizing Performance Topper.m4v */; };
+		72EF41421A1B955900140B9F /* 18 Gel Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412E1A1B955900140B9F /* 18 Gel Topper.m4v */; };
+		72EF41431A1B955900140B9F /* 19 Smart Foam Alone1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF412F1A1B955900140B9F /* 19 Smart Foam Alone1.m4v */; };
+		72EF41441A1B955900140B9F /* 20 Total Support Topper.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 72EF41301A1B955900140B9F /* 20 Total Support Topper.m4v */; };
+		72F6DD061A23ACEF00BF3E62 /* 01 FXI About - Main.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */; };
+		72F6DD071A23ACEF00BF3E62 /* 02 FXI About - Web.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */; };
+		72F6DD081A23ACEF00BF3E62 /* 03 FXI Who We Are.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */; };
+		72F6DD091A23ACEF00BF3E62 /* 04 FXI Journey.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */; };
+		72F6DD0A1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */; };
+		72F6DD0B1A23ACEF00BF3E62 /* 06 Aston Tour.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */; };
+		72F6DD0C1A23ACEF00BF3E62 /* 07 FXI at Nascar.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */; };
+		72F6DD0D1A23ACEF00BF3E62 /* 08 Topper Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DCFF1A23ACEF00BF3E62 /* 08 Topper Instructions.png */; };
+		72F6DD0E1A23ACEF00BF3E62 /* 09 Aerus Max.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD001A23ACEF00BF3E62 /* 09 Aerus Max.png */; };
+		72F6DD0F1A23ACEF00BF3E62 /* 10 Ambiessence.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD011A23ACEF00BF3E62 /* 10 Ambiessence.png */; };
+		72F6DD101A23ACEF00BF3E62 /* 11 MaxPerm.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD021A23ACEF00BF3E62 /* 11 MaxPerm.png */; };
+		72F6DD111A23ACEF00BF3E62 /* 12 MemGel Swirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD031A23ACEF00BF3E62 /* 12 MemGel Swirl.png */; };
+		72F6DD121A23ACEF00BF3E62 /* 13 GelTrix.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD041A23ACEF00BF3E62 /* 13 GelTrix.png */; };
+		72F6DD131A23ACEF00BF3E62 /* 14 PM - All Videos.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */; };
+		92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3D9941A0D09110023C29E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +85,47 @@
 		72D065F71A0BBE4200D0E47B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72D065FD1A0BCE1700D0E47B /* VideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosTableViewController.h; sourceTree = "<group>"; };
 		72D065FE1A0BCE1700D0E47B /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
-		72D066001A0BDA7000D0E47B /* test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = test.MOV; path = Resources/test.MOV; sourceTree = "<group>"; };
 		72D066021A0BF6FF00D0E47B /* VideosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewController.h; sourceTree = "<group>"; };
 		72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewController.m; sourceTree = "<group>"; };
 		72D066051A0BFFD800D0E47B /* VideosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewCell.h; sourceTree = "<group>"; };
 		72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewCell.m; sourceTree = "<group>"; };
+		72D40E0F1A24E44B0038BB79 /* VideosCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionHeaderView.h; sourceTree = "<group>"; };
+		72D40E101A24E44B0038BB79 /* VideosCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionHeaderView.m; sourceTree = "<group>"; };
+		72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 FXI About - Main.m4v"; path = "Resources/01 FXI About - Main.m4v"; sourceTree = "<group>"; };
+		72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 FXI About - Web.m4v"; path = "Resources/02 FXI About - Web.m4v"; sourceTree = "<group>"; };
+		72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 FXI Who We Are.m4v"; path = "Resources/03 FXI Who We Are.m4v"; sourceTree = "<group>"; };
+		72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 FXI Journey.m4v"; path = "Resources/04 FXI Journey.m4v"; sourceTree = "<group>"; };
+		72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Molecules to Mattresses.m4v"; path = "Resources/05 Molecules to Mattresses.m4v"; sourceTree = "<group>"; };
+		72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Aston Tour.m4v"; path = "Resources/06 Aston Tour.m4v"; sourceTree = "<group>"; };
+		72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 FXI at Nascar.m4v"; path = "Resources/07 FXI at Nascar.m4v"; sourceTree = "<group>"; };
+		72EF41241A1B955900140B9F /* 08 Topper Instructions.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Topper Instructions.m4v"; path = "Resources/08 Topper Instructions.m4v"; sourceTree = "<group>"; };
+		72EF41251A1B955900140B9F /* 09 Aerus Max.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Aerus Max.m4v"; path = "Resources/09 Aerus Max.m4v"; sourceTree = "<group>"; };
+		72EF41261A1B955900140B9F /* 10 Ambiessence.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Ambiessence.m4v"; path = "Resources/10 Ambiessence.m4v"; sourceTree = "<group>"; };
+		72EF41271A1B955900140B9F /* 11 MaxPerm.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 MaxPerm.m4v"; path = "Resources/11 MaxPerm.m4v"; sourceTree = "<group>"; };
+		72EF41281A1B955900140B9F /* 12 MemGel Swirl.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 MemGel Swirl.m4v"; path = "Resources/12 MemGel Swirl.m4v"; sourceTree = "<group>"; };
+		72EF41291A1B955900140B9F /* 13 GelTrix.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 GelTrix.m4v"; path = "Resources/13 GelTrix.m4v"; sourceTree = "<group>"; };
+		72EF412A1A1B955900140B9F /* 14 Back Support Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14 Back Support Topper.m4v"; path = "Resources/14 Back Support Topper.m4v"; sourceTree = "<group>"; };
+		72EF412B1A1B955900140B9F /* 15 Customizable Relief Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "15 Customizable Relief Topper.m4v"; path = "Resources/15 Customizable Relief Topper.m4v"; sourceTree = "<group>"; };
+		72EF412C1A1B955900140B9F /* 16 Elite Performance Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "16 Elite Performance Topper.m4v"; path = "Resources/16 Elite Performance Topper.m4v"; sourceTree = "<group>"; };
+		72EF412D1A1B955900140B9F /* 17 Energizing Performance Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "17 Energizing Performance Topper.m4v"; path = "Resources/17 Energizing Performance Topper.m4v"; sourceTree = "<group>"; };
+		72EF412E1A1B955900140B9F /* 18 Gel Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "18 Gel Topper.m4v"; path = "Resources/18 Gel Topper.m4v"; sourceTree = "<group>"; };
+		72EF412F1A1B955900140B9F /* 19 Smart Foam Alone1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "19 Smart Foam Alone1.m4v"; path = "Resources/19 Smart Foam Alone1.m4v"; sourceTree = "<group>"; };
+		72EF41301A1B955900140B9F /* 20 Total Support Topper.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 Total Support Topper.m4v"; path = "Resources/20 Total Support Topper.m4v"; sourceTree = "<group>"; };
+		72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01 FXI About - Main.png"; path = "Resources/Thumbnails/01 FXI About - Main.png"; sourceTree = "<group>"; };
+		72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02 FXI About - Web.png"; path = "Resources/Thumbnails/02 FXI About - Web.png"; sourceTree = "<group>"; };
+		72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03 FXI Who We Are.png"; path = "Resources/Thumbnails/03 FXI Who We Are.png"; sourceTree = "<group>"; };
+		72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04 FXI Journey.png"; path = "Resources/Thumbnails/04 FXI Journey.png"; sourceTree = "<group>"; };
+		72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05 Molecules to Mattresses.png"; path = "Resources/Thumbnails/05 Molecules to Mattresses.png"; sourceTree = "<group>"; };
+		72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06 Aston Tour.png"; path = "Resources/Thumbnails/06 Aston Tour.png"; sourceTree = "<group>"; };
+		72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "07 FXI at Nascar.png"; path = "Resources/Thumbnails/07 FXI at Nascar.png"; sourceTree = "<group>"; };
+		72F6DCFF1A23ACEF00BF3E62 /* 08 Topper Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08 Topper Instructions.png"; path = "Resources/Thumbnails/08 Topper Instructions.png"; sourceTree = "<group>"; };
+		72F6DD001A23ACEF00BF3E62 /* 09 Aerus Max.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "09 Aerus Max.png"; path = "Resources/Thumbnails/09 Aerus Max.png"; sourceTree = "<group>"; };
+		72F6DD011A23ACEF00BF3E62 /* 10 Ambiessence.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "10 Ambiessence.png"; path = "Resources/Thumbnails/10 Ambiessence.png"; sourceTree = "<group>"; };
+		72F6DD021A23ACEF00BF3E62 /* 11 MaxPerm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "11 MaxPerm.png"; path = "Resources/Thumbnails/11 MaxPerm.png"; sourceTree = "<group>"; };
+		72F6DD031A23ACEF00BF3E62 /* 12 MemGel Swirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "12 MemGel Swirl.png"; path = "Resources/Thumbnails/12 MemGel Swirl.png"; sourceTree = "<group>"; };
+		72F6DD041A23ACEF00BF3E62 /* 13 GelTrix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "13 GelTrix.png"; path = "Resources/Thumbnails/13 GelTrix.png"; sourceTree = "<group>"; };
+		72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "14 PM - All Videos.png"; path = "Resources/Thumbnails/14 PM - All Videos.png"; sourceTree = "<group>"; };
+		92A3D9941A0D09110023C29E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */,
 				72D065F81A0BBE4200D0E47B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +154,7 @@
 				72D065C51A0BAA5700D0E47B /* FXI Videos */,
 				72D065DF1A0BAA5700D0E47B /* FXI VideosTests */,
 				72D065C41A0BAA5700D0E47B /* Products */,
+				92A3D9941A0D09110023C29E /* MediaPlayer.framework */,
 				72D065F71A0BBE4200D0E47B /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
@@ -151,7 +224,40 @@
 		72D065F91A0BCD2400D0E47B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				72D066001A0BDA7000D0E47B /* test.MOV */,
+				72F6DCF81A23ACEF00BF3E62 /* 01 FXI About - Main.png */,
+				72F6DCF91A23ACEF00BF3E62 /* 02 FXI About - Web.png */,
+				72F6DCFA1A23ACEF00BF3E62 /* 03 FXI Who We Are.png */,
+				72F6DCFB1A23ACEF00BF3E62 /* 04 FXI Journey.png */,
+				72F6DCFC1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png */,
+				72F6DCFD1A23ACEF00BF3E62 /* 06 Aston Tour.png */,
+				72F6DCFE1A23ACEF00BF3E62 /* 07 FXI at Nascar.png */,
+				72F6DCFF1A23ACEF00BF3E62 /* 08 Topper Instructions.png */,
+				72F6DD001A23ACEF00BF3E62 /* 09 Aerus Max.png */,
+				72F6DD011A23ACEF00BF3E62 /* 10 Ambiessence.png */,
+				72F6DD021A23ACEF00BF3E62 /* 11 MaxPerm.png */,
+				72F6DD031A23ACEF00BF3E62 /* 12 MemGel Swirl.png */,
+				72F6DD041A23ACEF00BF3E62 /* 13 GelTrix.png */,
+				72F6DD051A23ACEF00BF3E62 /* 14 PM - All Videos.png */,
+				72EF411D1A1B955900140B9F /* 01 FXI About - Main.m4v */,
+				72EF411E1A1B955900140B9F /* 02 FXI About - Web.m4v */,
+				72EF411F1A1B955900140B9F /* 03 FXI Who We Are.m4v */,
+				72EF41201A1B955900140B9F /* 04 FXI Journey.m4v */,
+				72EF41211A1B955900140B9F /* 05 Molecules to Mattresses.m4v */,
+				72EF41221A1B955900140B9F /* 06 Aston Tour.m4v */,
+				72EF41231A1B955900140B9F /* 07 FXI at Nascar.m4v */,
+				72EF41241A1B955900140B9F /* 08 Topper Instructions.m4v */,
+				72EF41251A1B955900140B9F /* 09 Aerus Max.m4v */,
+				72EF41261A1B955900140B9F /* 10 Ambiessence.m4v */,
+				72EF41271A1B955900140B9F /* 11 MaxPerm.m4v */,
+				72EF41281A1B955900140B9F /* 12 MemGel Swirl.m4v */,
+				72EF41291A1B955900140B9F /* 13 GelTrix.m4v */,
+				72EF412A1A1B955900140B9F /* 14 Back Support Topper.m4v */,
+				72EF412B1A1B955900140B9F /* 15 Customizable Relief Topper.m4v */,
+				72EF412C1A1B955900140B9F /* 16 Elite Performance Topper.m4v */,
+				72EF412D1A1B955900140B9F /* 17 Energizing Performance Topper.m4v */,
+				72EF412E1A1B955900140B9F /* 18 Gel Topper.m4v */,
+				72EF412F1A1B955900140B9F /* 19 Smart Foam Alone1.m4v */,
+				72EF41301A1B955900140B9F /* 20 Total Support Topper.m4v */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -172,6 +278,8 @@
 			children = (
 				72D066051A0BFFD800D0E47B /* VideosCollectionViewCell.h */,
 				72D066061A0BFFD800D0E47B /* VideosCollectionViewCell.m */,
+				72D40E0F1A24E44B0038BB79 /* VideosCollectionHeaderView.h */,
+				72D40E101A24E44B0038BB79 /* VideosCollectionHeaderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -257,11 +365,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EF41341A1B955900140B9F /* 04 FXI Journey.m4v in Resources */,
+				72EF413E1A1B955900140B9F /* 14 Back Support Topper.m4v in Resources */,
+				72EF413D1A1B955900140B9F /* 13 GelTrix.m4v in Resources */,
 				72D065EE1A0BAC0E00D0E47B /* Main~ipad.storyboard in Resources */,
+				72EF41441A1B955900140B9F /* 20 Total Support Topper.m4v in Resources */,
+				72EF413A1A1B955900140B9F /* 10 Ambiessence.m4v in Resources */,
+				72F6DD101A23ACEF00BF3E62 /* 11 MaxPerm.png in Resources */,
+				72F6DD0E1A23ACEF00BF3E62 /* 09 Aerus Max.png in Resources */,
+				72EF413F1A1B955900140B9F /* 15 Customizable Relief Topper.m4v in Resources */,
 				72D065D21A0BAA5700D0E47B /* Main.storyboard in Resources */,
+				72F6DD0A1A23ACEF00BF3E62 /* 05 Molecules to Mattresses.png in Resources */,
+				72F6DD081A23ACEF00BF3E62 /* 03 FXI Who We Are.png in Resources */,
+				72F6DD071A23ACEF00BF3E62 /* 02 FXI About - Web.png in Resources */,
+				72F6DD0D1A23ACEF00BF3E62 /* 08 Topper Instructions.png in Resources */,
+				72EF41381A1B955900140B9F /* 08 Topper Instructions.m4v in Resources */,
+				72EF41321A1B955900140B9F /* 02 FXI About - Web.m4v in Resources */,
+				72EF41401A1B955900140B9F /* 16 Elite Performance Topper.m4v in Resources */,
+				72EF41411A1B955900140B9F /* 17 Energizing Performance Topper.m4v in Resources */,
 				72D065D71A0BAA5700D0E47B /* LaunchScreen.xib in Resources */,
-				72D066011A0BDA7000D0E47B /* test.MOV in Resources */,
+				72EF413C1A1B955900140B9F /* 12 MemGel Swirl.m4v in Resources */,
+				72F6DD121A23ACEF00BF3E62 /* 13 GelTrix.png in Resources */,
+				72F6DD061A23ACEF00BF3E62 /* 01 FXI About - Main.png in Resources */,
+				72F6DD0F1A23ACEF00BF3E62 /* 10 Ambiessence.png in Resources */,
+				72EF41311A1B955900140B9F /* 01 FXI About - Main.m4v in Resources */,
+				72F6DD0C1A23ACEF00BF3E62 /* 07 FXI at Nascar.png in Resources */,
+				72EF41391A1B955900140B9F /* 09 Aerus Max.m4v in Resources */,
+				72EF41431A1B955900140B9F /* 19 Smart Foam Alone1.m4v in Resources */,
+				72F6DD091A23ACEF00BF3E62 /* 04 FXI Journey.png in Resources */,
+				72EF41361A1B955900140B9F /* 06 Aston Tour.m4v in Resources */,
 				72D065D41A0BAA5700D0E47B /* Images.xcassets in Resources */,
+				72EF41351A1B955900140B9F /* 05 Molecules to Mattresses.m4v in Resources */,
+				72F6DD0B1A23ACEF00BF3E62 /* 06 Aston Tour.png in Resources */,
+				72EF413B1A1B955900140B9F /* 11 MaxPerm.m4v in Resources */,
+				72F6DD131A23ACEF00BF3E62 /* 14 PM - All Videos.png in Resources */,
+				72F6DD111A23ACEF00BF3E62 /* 12 MemGel Swirl.png in Resources */,
+				72EF41371A1B955900140B9F /* 07 FXI at Nascar.m4v in Resources */,
+				72EF41421A1B955900140B9F /* 18 Gel Topper.m4v in Resources */,
+				72EF41331A1B955900140B9F /* 03 FXI Who We Are.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D40E111A24E44B0038BB79 /* VideosCollectionHeaderView.m in Sources */,
 				72D066071A0BFFD800D0E47B /* VideosCollectionViewCell.m in Sources */,
 				72D065CC1A0BAA5700D0E47B /* AppDelegate.m in Sources */,
 				72D065C91A0BAA5700D0E47B /* main.m in Sources */,
@@ -418,9 +560,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FXI Videos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,9 +576,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FXI Videos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -491,6 +639,7 @@
 				72D065E81A0BAA5700D0E47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D065E91A0BAA5700D0E47B /* Build configuration list for PBXNativeTarget "FXI VideosTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +648,7 @@
 				72D065EB1A0BAA5700D0E47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

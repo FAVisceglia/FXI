@@ -8,9 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ A view representing a collection view cell
+ 
+ @inherit UICollectionViewCell
+ */
 @interface VideosCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *videoThumbnailImage;
-@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabel;
+
+#pragma mark - Public Properties
+
+// A label in the cell to display the video title
+@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabelView;
+
+// A button to play the video, displaying the video thumbnail
+@property (weak, nonatomic) IBOutlet UIButton *videoThumbnailButtonView;
 
 @end

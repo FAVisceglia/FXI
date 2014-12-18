@@ -1,77 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="ND6-Hw-6mm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="AtT-Pz-QP9">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--FXI Videos-->
-        <scene sceneID="VfM-hB-pWw">
+        <scene sceneID="SXK-Jz-kHs">
             <objects>
-                <collectionViewController id="9hK-j9-Vl1" customClass="VideosCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ldw-pT-kqq">
+                <collectionViewController id="hs8-Jp-tdr" customClass="VideosCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dZt-cy-cBi">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LGU-Eh-pGb">
-                            <size key="itemSize" width="176" height="189"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Kb-C0-N8a">
+                            <size key="itemSize" width="176" height="170"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Video Cell" id="6L8-hG-eXO" customClass="VideosCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Video Cell" id="5un-Je-CiJ" customClass="VideosCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="189"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfZ-Xw-nTr">
-                                            <rect key="frame" x="8" y="106" width="160" height="63"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zom-RU-xx1">
+                                            <rect key="frame" x="8" y="102" width="160" height="60"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.070588235294117646" green="0.20392156862745098" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJQ-Kf-kDX">
-                                            <rect key="frame" x="8" y="8" width="160" height="95"/>
-                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYN-R0-5DS">
+                                            <rect key="frame" x="8" y="8" width="160" height="90"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playVideo:" destination="hs8-Jp-tdr" eventType="touchUpInside" id="au3-W5-uhQ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <outlet property="videoThumbnailImage" destination="oJQ-Kf-kDX" id="794-bL-DBH"/>
-                                    <outlet property="videoTitleLabel" destination="EfZ-Xw-nTr" id="Glf-W6-nf3"/>
+                                    <outlet property="videoThumbnailButtonView" destination="jYN-R0-5DS" id="WLk-II-hwP"/>
+                                    <outlet property="videoTitleLabelView" destination="zom-RU-xx1" id="Uj7-iY-fBf"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header View" id="l5S-Of-ya9" customClass="VideosCollectionHeaderView">
+                            <rect key="frame" x="0.0" y="64" width="768" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-J6-v5U">
+                                    <rect key="frame" x="28" y="25" width="712" height="17"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                    <color key="textColor" red="0.070588235289999995" green="0.20392156859999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="nrp-J6-v5U" firstAttribute="bottom" secondItem="l5S-Of-ya9" secondAttribute="bottomMargin" id="Icf-Vr-VLd"/>
+                                <constraint firstItem="nrp-J6-v5U" firstAttribute="trailing" secondItem="l5S-Of-ya9" secondAttribute="trailingMargin" constant="-20" id="dDT-vF-rAf"/>
+                                <constraint firstItem="nrp-J6-v5U" firstAttribute="leading" secondItem="l5S-Of-ya9" secondAttribute="leadingMargin" constant="20" id="uOH-Qh-NUF"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="sectionTitleLabel" destination="nrp-J6-v5U" id="ApI-ff-p29"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
-                            <outlet property="dataSource" destination="9hK-j9-Vl1" id="qrA-bv-Y2D"/>
-                            <outlet property="delegate" destination="9hK-j9-Vl1" id="qSp-na-Ci9"/>
+                            <outlet property="dataSource" destination="hs8-Jp-tdr" id="E54-Y8-fRl"/>
+                            <outlet property="delegate" destination="hs8-Jp-tdr" id="d3C-Ou-0Oh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="FXI Videos" id="70M-5C-L3w"/>
+                    <navigationItem key="navigationItem" title="FXI Videos" id="f6A-8i-Gh7"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9pR-Gf-AQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABb-w6-TN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="294"/>
+            <point key="canvasLocation" x="2807" y="294"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="aKu-FL-jTs">
+        <scene sceneID="4Z0-5n-ij3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND6-Hw-6mm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AtT-Pz-QP9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pvp-Kf-eEH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KZq-5d-8de">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <color key="textColor" red="0.070588235289999995" green="0.20392156859999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9hK-j9-Vl1" kind="relationship" relationship="rootViewController" id="rZn-m4-S1E"/>
+                        <segue destination="hs8-Jp-tdr" kind="relationship" relationship="rootViewController" id="xcB-6n-9c2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0WU-Iq-pbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMP-Wr-eJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="294"/>
+            <point key="canvasLocation" x="1827" y="294"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
