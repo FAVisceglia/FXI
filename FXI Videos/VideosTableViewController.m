@@ -20,6 +20,9 @@
 // Filtered array of the objects to represent in the search results table
 @property (copy, nonatomic) NSArray *filteredVideos;
 
+// Filtered array of the objects to represent in the search results table
+@property (copy, nonatomic) NSArray *filteredMappingVideos;
+
 // Array of section two objects
 @property (copy, nonatomic) NSMutableArray *mappingVideos;
 
@@ -72,6 +75,22 @@
     }
     
     return _filteredVideos;
+}
+
+/**
+ Getter for the private filtered mapping videos array
+ 
+ @return The local array variable, fully instantiated
+ */
+- (NSArray *)filteredMappingVideos
+{
+    // Lazy array instantiation (instantiates the array if not already done)
+    if (!_filteredMappingVideos)
+    {
+        _filteredMappingVideos = [[NSArray alloc] init];
+    }
+    
+    return _filteredMappingVideos;
 }
 
 /**
@@ -353,7 +372,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // If the active table view is the search results, there is only 1 section (the results section)
-    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if (tableView == [[self searchDisplayController] searchResultsTableView] && [[self filteredMappingVideos] count] == 0)
     {
         return 1;
     }
@@ -375,9 +394,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // If the active table view is the search results, return the count of the filtered search results array
-    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if (tableView == [[self searchDisplayController] searchResultsTableView] && section == 0)
     {
         return [[self filteredVideos] count];
+    }
+    else if (tableView == [[self searchDisplayController] searchResultsTableView] && section == 1)
+    {
+        return [[self filteredMappingVideos] count];
     }
     // Else if this is the first section, return the count of the main array
     else if (section == 0)
@@ -439,9 +462,13 @@
     FXIVideo *video = nil;
     
     // If the active table view is the search results, get the corresponding video from the search results array
-    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if (tableView == [[self searchDisplayController] searchResultsTableView] && [indexPath section] == 0)
     {
         video = [[self filteredVideos] objectAtIndex:[indexPath row]];
+    }
+    else if (tableView == [[self searchDisplayController] searchResultsTableView] && [indexPath section] == 1)
+    {
+        video = [[self filteredMappingVideos] objectAtIndex:[indexPath row]];
     }
     // Else if this is the first section, get the corresponding video from the main array
     else if ([indexPath section] == 0)
@@ -495,9 +522,13 @@
     FXIVideo *video = nil;
     
     // If active table view is the search results, grab selected video from search results array
-    if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if (tableView == [[self searchDisplayController] searchResultsTableView] && [indexPath section] == 0)
     {
         video = [[self filteredVideos] objectAtIndex:[indexPath row]];
+    }
+    else if (tableView == [[self searchDisplayController] searchResultsTableView] && [indexPath section] == 0)
+    {
+        video = [[self filteredMappingVideos] objectAtIndex:[indexPath row]];
     }
     // Else if selected cell is in the first section, grab selected video from main array
     else if ([indexPath section] == 0)
@@ -551,6 +582,7 @@
 {
     // Reset and clear any previous search results
     [self setFilteredVideos:nil];
+    [self setFilteredMappingVideos:nil];
     
     // Use a predicate to parse search query and populate filtered results
     // "title" refers to the property to search against
@@ -558,7 +590,8 @@
     // "category" refers to an additional property to search against, using a logical OR
     // "BEGINSWITH[c] means that if the category begins with the search query (case-insensitive)
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ OR category BEGINSWITH[c] %@", searchText, searchText];
-    [self setFilteredVideos:[[self allVideos] filteredArrayUsingPredicate:predicate]];
+    [self setFilteredVideos:[[self videos] filteredArrayUsingPredicate:predicate]];
+    [self setFilteredMappingVideos:[[self mappingVideos] filteredArrayUsingPredicate:predicate]];
 }
 
 @end
