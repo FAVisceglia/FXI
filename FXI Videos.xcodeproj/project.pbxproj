@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7207BA061A8A817B00597E4C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7207BA051A8A817B00597E4C /* CoreData.framework */; };
+		7207BA081A8A818300597E4C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7207BA071A8A818300597E4C /* SystemConfiguration.framework */; };
+		7207BA0A1A8A819200597E4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7207BA091A8A819200597E4C /* libz.dylib */; };
+		7207BA0C1A8A819800597E4C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7207BA0B1A8A819800597E4C /* libsqlite3.dylib */; };
+		7207BA0E1A8A81B700597E4C /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7207BA0D1A8A81B700597E4C /* libGoogleAnalyticsServices.a */; };
 		7268DBF71A894F4900EF2BDB /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7268DBF61A894F4900EF2BDB /* SearchResultsTableViewController.m */; };
 		72D065C91A0BAA5700D0E47B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065C81A0BAA5700D0E47B /* main.m */; };
 		72D065CC1A0BAA5700D0E47B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065CB1A0BAA5700D0E47B /* AppDelegate.m */; };
@@ -69,6 +74,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7207B9FC1A8A813B00597E4C /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		7207B9FD1A8A813B00597E4C /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		7207B9FE1A8A813B00597E4C /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		7207B9FF1A8A813B00597E4C /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		7207BA001A8A813B00597E4C /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		7207BA011A8A813B00597E4C /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		7207BA021A8A813B00597E4C /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		7207BA031A8A813B00597E4C /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		7207BA041A8A813B00597E4C /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		7207BA051A8A817B00597E4C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7207BA071A8A818300597E4C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7207BA091A8A819200597E4C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7207BA0B1A8A819800597E4C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		7207BA0D1A8A81B700597E4C /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../GoogleAnalyticsServicesiOS_3.10/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		7268DBF51A894F4900EF2BDB /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
 		7268DBF61A894F4900EF2BDB /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = "<group>"; };
 		72D065C31A0BAA5700D0E47B /* FXI Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FXI Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +155,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7207BA0E1A8A81B700597E4C /* libGoogleAnalyticsServices.a in Frameworks */,
+				7207BA0C1A8A819800597E4C /* libsqlite3.dylib in Frameworks */,
+				7207BA0A1A8A819200597E4C /* libz.dylib in Frameworks */,
+				7207BA081A8A818300597E4C /* SystemConfiguration.framework in Frameworks */,
+				7207BA061A8A817B00597E4C /* CoreData.framework in Frameworks */,
 				92A3D9951A0D09110023C29E /* MediaPlayer.framework in Frameworks */,
 				72D065F81A0BBE4200D0E47B /* AVFoundation.framework in Frameworks */,
 			);
@@ -151,12 +175,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7207B9FB1A8A811D00597E4C /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				7207B9FC1A8A813B00597E4C /* GAI.h */,
+				7207B9FD1A8A813B00597E4C /* GAIDictionaryBuilder.h */,
+				7207B9FE1A8A813B00597E4C /* GAIEcommerceProduct.h */,
+				7207B9FF1A8A813B00597E4C /* GAIEcommerceProductAction.h */,
+				7207BA001A8A813B00597E4C /* GAIEcommercePromotion.h */,
+				7207BA011A8A813B00597E4C /* GAIFields.h */,
+				7207BA021A8A813B00597E4C /* GAILogger.h */,
+				7207BA031A8A813B00597E4C /* GAITrackedViewController.h */,
+				7207BA041A8A813B00597E4C /* GAITracker.h */,
+			);
+			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
 		72D065BA1A0BAA5600D0E47B = {
 			isa = PBXGroup;
 			children = (
 				72D065C51A0BAA5700D0E47B /* FXI Videos */,
 				72D065DF1A0BAA5700D0E47B /* FXI VideosTests */,
 				72D065C41A0BAA5700D0E47B /* Products */,
+				7207BA0D1A8A81B700597E4C /* libGoogleAnalyticsServices.a */,
+				7207BA0B1A8A819800597E4C /* libsqlite3.dylib */,
+				7207BA091A8A819200597E4C /* libz.dylib */,
+				7207BA071A8A818300597E4C /* SystemConfiguration.framework */,
+				7207BA051A8A817B00597E4C /* CoreData.framework */,
 				92A3D9941A0D09110023C29E /* MediaPlayer.framework */,
 				72D065F71A0BBE4200D0E47B /* AVFoundation.framework */,
 			);
@@ -182,6 +227,7 @@
 				72D065F11A0BB11000D0E47B /* Model */,
 				72D066081A0BFFE200D0E47B /* Views */,
 				72D065F91A0BCD2400D0E47B /* Resources */,
+				7207B9FB1A8A811D00597E4C /* Google Analytics */,
 				72D065C61A0BAA5700D0E47B /* Supporting Files */,
 			);
 			path = "FXI Videos";
@@ -499,7 +545,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: FXI, Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: FXI, Inc";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -542,7 +589,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: FXI, Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: FXI, Inc";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -572,6 +620,10 @@
 				INFOPLIST_FILE = "FXI Videos/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/avisceglia/Developer/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "42c39954-c7eb-487e-8c7d-6f99e62350ea";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +640,10 @@
 				INFOPLIST_FILE = "FXI Videos/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/avisceglia/Developer/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "42c39954-c7eb-487e-8c7d-6f99e62350ea";
 				TARGETED_DEVICE_FAMILY = "1,2";

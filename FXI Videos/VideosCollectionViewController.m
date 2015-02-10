@@ -11,6 +11,9 @@
 #import "VideosCollectionViewCell.h"
 #import "VideosCollectionHeaderView.h"
 #import "SearchResultsTableViewController.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 
 @interface VideosCollectionViewController ()
@@ -312,6 +315,13 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                                                       withExtension:@"png"]];
         [[self mappingVideos] addObject:video];
     }
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createScreenView];
+    [builder set:@"start" forKey:kGAISessionControl];
+    [tracker set:kGAIScreenName value:@"Videos App"];
+    [tracker send:[builder build]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -319,6 +329,11 @@ static NSString * const reuseIdentifier = @"Video Cell";
     [super viewWillAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchSelectionMade:) name:@"SelectionMadeNotification" object:nil];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAIScreenName value:@"Home Screen"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -503,6 +518,10 @@ static NSString * const reuseIdentifier = @"Video Cell";
         [[player moviePlayer] setScalingMode:MPMovieScalingModeAspectFit];
 
         [self presentMoviePlayerViewControllerAnimated:player];
+        
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UI_Action" action:@"Played_Video" label:[video title] value:nil] build]];
     }
 }
 
@@ -510,6 +529,10 @@ static NSString * const reuseIdentifier = @"Video Cell";
 {
     if (NSClassFromString(@"UISearchController"))
     {
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UI_Action" action:@"Searched_Video" label:nil value:nil] build]];
+        
         SearchResultsTableViewController *searchTableViewController = [[SearchResultsTableViewController alloc] initWithStyle:UITableViewStylePlain];
         [searchTableViewController setFullResults:[self videos]];
         
@@ -569,6 +592,10 @@ static NSString * const reuseIdentifier = @"Video Cell";
         
         [self presentMoviePlayerViewControllerAnimated:player];
     });
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UI_Action" action:@"Played_Video" label:[video title] value:nil] build]];
 }
 
 @end
