@@ -10,6 +10,7 @@
 #import "FXIVideo.h"
 #import "VideosCollectionViewCell.h"
 #import "VideosCollectionHeaderView.h"
+#import "SearchResultsTableViewController.h"
 
 
 @interface VideosCollectionViewController ()
@@ -24,6 +25,9 @@
 
 // Array of the mapping (section two) videos
 @property (copy, nonatomic) NSMutableArray *mappingVideos;
+
+//
+@property (strong, nonatomic) UIPopoverController *searchPopoverController;
 
 @end
 
@@ -308,8 +312,20 @@ static NSString * const reuseIdentifier = @"Video Cell";
                                                                       withExtension:@"png"]];
         [[self mappingVideos] addObject:video];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchSelectionMade:) name:@"SelectionMadeNotification" object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /**
@@ -490,6 +506,26 @@ static NSString * const reuseIdentifier = @"Video Cell";
     }
 }
 
+- (IBAction)searchButtonPressed:(UIBarButtonItem *)sender
+{
+    if (NSClassFromString(@"UISearchController"))
+    {
+        SearchResultsTableViewController *searchTableViewController = [[SearchResultsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        [searchTableViewController setFullResults:[self videos]];
+        
+        [self setSearchPopoverController:[[UIPopoverController alloc] initWithContentViewController:searchTableViewController]];
+        [[self searchPopoverController] presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Update Required"
+                                                        message:@"Searching requires iOS 8. Please update your device."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 #pragma mark - Collection View Flow Layout Delegation
 
@@ -512,6 +548,27 @@ static NSString * const reuseIdentifier = @"Video Cell";
     {
         return CGSizeZero;
     }
+}
+
+- (void)searchSelectionMade:(NSNotification *)notification
+{
+    NSLog(@"Notification received");
+    
+    FXIVideo *video = [[notification userInfo] objectForKey:@"selection"];
+    
+    [[self searchPopoverController] dismissPopoverAnimated:YES];
+
+
+    double delay = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[video videoURL]];
+        [[player moviePlayer] setFullscreen:YES
+                                   animated:YES];
+        [[player moviePlayer] setScalingMode:MPMovieScalingModeAspectFit];
+        
+        [self presentMoviePlayerViewControllerAnimated:player];
+    });
 }
 
 @end

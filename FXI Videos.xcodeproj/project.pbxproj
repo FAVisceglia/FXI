@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7268DBF71A894F4900EF2BDB /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7268DBF61A894F4900EF2BDB /* SearchResultsTableViewController.m */; };
 		72D065C91A0BAA5700D0E47B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065C81A0BAA5700D0E47B /* main.m */; };
 		72D065CC1A0BAA5700D0E47B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D065CB1A0BAA5700D0E47B /* AppDelegate.m */; };
 		72D065D21A0BAA5700D0E47B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D065D01A0BAA5700D0E47B /* Main.storyboard */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7268DBF51A894F4900EF2BDB /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
+		7268DBF61A894F4900EF2BDB /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = "<group>"; };
 		72D065C31A0BAA5700D0E47B /* FXI Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FXI Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D065C71A0BAA5700D0E47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D065C81A0BAA5700D0E47B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				72D065FE1A0BCE1700D0E47B /* VideosTableViewController.m */,
 				72D066021A0BF6FF00D0E47B /* VideosCollectionViewController.h */,
 				72D066031A0BF6FF00D0E47B /* VideosCollectionViewController.m */,
+				7268DBF51A894F4900EF2BDB /* SearchResultsTableViewController.h */,
+				7268DBF61A894F4900EF2BDB /* SearchResultsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				72D066071A0BFFD800D0E47B /* VideosCollectionViewCell.m in Sources */,
 				72D065CC1A0BAA5700D0E47B /* AppDelegate.m in Sources */,
 				72D065C91A0BAA5700D0E47B /* main.m in Sources */,
+				7268DBF71A894F4900EF2BDB /* SearchResultsTableViewController.m in Sources */,
 				72D065F61A0BB1A600D0E47B /* FXIVideo.m in Sources */,
 				72D065FF1A0BCE1700D0E47B /* VideosTableViewController.m in Sources */,
 				72D066041A0BF6FF00D0E47B /* VideosCollectionViewController.m in Sources */,
